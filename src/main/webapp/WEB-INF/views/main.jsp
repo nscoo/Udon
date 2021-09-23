@@ -178,10 +178,10 @@
     <div class="container">
         <div class="header">
             <div class="h-logo">
-                <a href="main.html" style="font-size: 40px;"><b>Udon</b></a>
+                <a href="${pageContext.request.contextPath}" style="font-size: 40px;"><b>Udon</b></a>
             </div>
             <div class="h-menu">
-                <span><a href="#" style="font-size: 20px;">my우동클</a></span>
+                <span><a href="${pageContext.request.contextPath}/myclub.do" style="font-size: 20px;">my우동클</a></span>
                 <span><a href="#" style="font-size: 20px;">우동클모집</a></span>
                 <span><a href="#" style="font-size: 20px;">우동커뮤니티</a></span>
             </div>
@@ -194,7 +194,7 @@
             <div class="main-l">
                 <div class="m-search" style="border: 5px solid purple; border-radius: 25px; width: 380px; height: 50px; padding-left: 10px;">
                     <form action="main.html" method="get">
-                        <button type="submit"><img src="assets/img/mag.png" width="20px" height="20px"></button><input class="m-input" type="text" name="search" placeholder="관심있는 정보를 검색해보세요!" />
+                        <button type="submit"><img src="${pageContext.request.contextPath}/assets/img/mag.png" width="20px" height="20px"></button><input class="m-input" type="text" name="search" placeholder="관심있는 정보를 검색해보세요!" />
                     </form>
                 </div>
                 <div class="m-covid">
@@ -222,7 +222,7 @@
                     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img style="display: inline-block;" src="assets/img/c-galbi.jpg" width="350px" height="250px">
+                                <img style="display: inline-block;" src="${pageContext.request.contextPath}/assets/img/c-galbi.jpg" width="350px" height="250px">
                                 <span style="display: inline-block; vertical-align: middle;">
                                     <h4><b>우리동네 갈비 맛집은?</b></h4>
                                     <br /><br /><br />
@@ -232,7 +232,7 @@
                                 </span>
                             </div>
                             <div class="carousel-item">
-                                <img src="assets/img/c-ramen.jpg" width="350px" height="250px">
+                                <img src="${pageContext.request.contextPath}/assets/img/c-ramen.jpg" width="350px" height="250px">
                                 <span style="display: inline-block; vertical-align: middle;">
                                     <h4><b>우리동네 라멘 맛집은?</b></h4>
                                     <br /><br /><br />
@@ -242,7 +242,7 @@
                                 </span>
                             </div>
                             <div class="carousel-item">
-                                <img src="assets/img/c-guk.jpg" width="350px" height="250px">
+                                <img src="${pageContext.request.contextPath}assets/img/c-guk.jpg" width="350px" height="250px">
                                 <span style="display: inline-block; vertical-align: middle;">
                                     <h4><b>우리동네 국밥 맛집은?</b></h4>
                                     <br /><br /><br />
@@ -385,7 +385,7 @@
         <hr />
         <div class="footer">
             <div class="logo">
-                <img src="assets/img/logo.png" width="150px;" height="150px;">
+                <img src="${pageContext.request.contextPath}/assets/img/logo.png" width="150px;" height="150px;">
             </div>
             <div class="f-menu">
                 <br />
