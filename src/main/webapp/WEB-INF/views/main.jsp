@@ -137,7 +137,7 @@
         place-self: start center;
         padding: 10px;
         margin-top: 40px;
-        border: 5px dotted purple;
+       
     }
 
     .main-r {
@@ -194,7 +194,7 @@
             <div class="main-l">
                 <div class="m-search" style="border: 5px solid purple; border-radius: 25px; width: 380px; height: 50px; padding-left: 10px;">
                     <form action="main.html" method="get">
-                        <button type="submit"><img src="${pageContext.request.contextPath}/assets/img/mag.png" width="20px" height="20px"></button><input class="m-input" type="text" name="search" placeholder="관심있는 정보를 검색해보세요!" />
+                        <button type="submit"><img src="assets/img/mag.png" width="20px" height="20px"></button><input class="m-input" type="text" name="search" placeholder="관심있는 정보를 검색해보세요!" />
                     </form>
                 </div>
                 <div class="m-covid">
