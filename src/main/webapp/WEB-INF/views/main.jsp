@@ -186,7 +186,7 @@
                 <span><a href="#" style="font-size: 20px;">우동커뮤니티</a></span>
             </div>
             <div class="h-login">
-                <span><a href="#">Login</a></span>
+                <span><a href="${pageContext.request.contextPath}/login.do">Login</a></span>
                 <span><a href="#">내정보</a></span>
             </div>
         </div>
