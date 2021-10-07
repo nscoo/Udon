@@ -25,5 +25,11 @@ public class HomeController {
 		
 		return "myclub";
 	}
+	@RequestMapping(value = "/club_detail.do", method = RequestMethod.GET)
+	public String club_detail() {
+		
+		
+		return "club_detail";
+	}
 	
 }

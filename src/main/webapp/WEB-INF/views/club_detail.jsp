@@ -124,6 +124,57 @@
         display: grid;
         place-content: center;
     }
+    .club-post {
+        display: grid;
+        background-color: lightgray;
+        margin-top: 50px;
+    }
+
+    .post {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+
+
+    }
+
+    .profile-photo {
+        display: grid;
+        place-self: start center;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .post-right {
+        display: grid;
+        padding-top: 20px;
+        place-self: start;
+    }
+
+    .journal {
+        display: grid;
+        padding-top: 20px;
+        place-self: start center;
+    }
+
+
+    .comment {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+
+
+    }
+
+    .c.profile {
+        display: grid;
+        place-self: start middle;
+        text-align: center;
+    }
+
+    .c.comment {
+        display: grid;
+        vertical-align: middle;
+
+    }
     </style>
 </head>
 
@@ -146,7 +197,7 @@
         <div class="main">
             <div class="m-left">
                 <div class="profile">
-                    <span style="text-align: center"><img src="assets/img/a.jpg" width="250px" height="250px" /></span>
+                    <span style="text-align: center"><img src="../assets/img/a.jpg" width="250px" height="250px" /></span>
                     <p style="text-align: center; font-size: 20px; font-weight: bold; padding-top: 10px;">소형견 사회화 모임</p>
                 </div>
                 <div class="profile-des">
@@ -170,11 +221,37 @@
                         <button class="btn btn-info disabled btn-sm">글쓰기</button>
                     </div>
                 </div>
-                <div class="post">
+                <div class="club-post">
+                    <div class="post">
+                        <div class="profile-photo">
+                            <span><img src="../assets/img/a.jpg" width="50px" height="50px" style="border-radius: 20px;"></span>
+                            <p>고심일등사랑</p>
+                        </div>
+                        <div class="post-right">
+                            <p style="font-size: 12px;">2021년 10월 07일 21시22분</p>
+                            <span><img src="../assets/img/c-ramen.jpg" width="400px" height="300px"></span>
+                        </div>
+                    </div>
+                    <div class="journal">
+                        <p>오늘 강동역앞에 새로생긴 라멘집 가봤는데 진짜 맛있었음!<br /> 제발 꼭 가봐요 여러분 ㅠㅠㅠ<br />아니면 다음 미팅 여기서 어떠십니까 여러분 애견동반가능해요!</p>
+                    </div>
+                    <div class="comments">
+                        <span style="padding: 0 20px;"><a href="#">좋아요(21)</a></span>
+                        <span><a href="#">댓글(1)</a></span>
+                        <div class="comment">
+                            <div class="c.profile">
+                                <span><img src="../assets/img/b.jpg" width="50px" height="50px"></span>
+                                <p style="font-size: 15px;">고심이등사랑</p>
+                            </div>
+                            <div class="c.comment">
+                                <span>오우 완전 맛있겠는데용? 고고!</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <hr />
+            <hr />
         <div class="footer">
             <div class="logo">
                 <img src="assets/img/logo.png" width="150px;" height="150px;">
