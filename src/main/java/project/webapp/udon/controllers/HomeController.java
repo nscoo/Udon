@@ -31,5 +31,10 @@ public class HomeController {
 		
 		return "club_detail";
 	}
-	
+	@RequestMapping(value = "/login.do", method = RequestMethod.GET)
+	public String login() {
+		
+		
+		return "login";
+	}
 }
