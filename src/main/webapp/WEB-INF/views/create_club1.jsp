@@ -129,65 +129,58 @@
     <div class="container">
         <div class="header">
             <div class="h-logo">
-                <a href="${pageContext.request.contextPath}" style="font-size: 40px;"><b>Udon</b></a>
+                <a href="main.do" style="font-size: 40px;"><b>Udon</b></a>
             </div>
             <div class="h-menu">
-                <span><a href="${pageContext.request.contextPath}/myclub.do" style="font-size: 20px;">my우동클</a></span>
+                <span><a href="myclub.do" style="font-size: 20px;">my우동클</a></span>
                 <span><a href="#" style="font-size: 20px;">우동클모집</a></span>
                 <span><a href="#" style="font-size: 20px;">우동커뮤니티</a></span>
             </div>
             <div class="h-login">
-                <span><a href="${pageContext.request.contextPath}/login.do">Login</a></span>
+                <span><a href="#">Login</a></span>
                 <span><a href="#">내정보</a></span>
             </div>
         </div>
         <div class="main">
             <div class="m-top">
-                <div class="top-left" style="font-size: 25px; font-weight: bold;">My클럽리스트</div>
-                <div class="top-right"><a href="#">⚙목록편집</a></div>
+                <div class="top-left" style="font-size: 28px; font-weight: bold;">
+                    만들고 싶은 클럽의 대분류를 선택해주세요!</div>
             </div>
             <div class="m-blocks">
                 <div class="club">
                     <a href="club_detail.do">
-                        <img src="assets/img/a.jpg" width="250px" height="250px" />
-                        <p style="text-align: center; font-size: 20px; font-weight: bold; padding-top: 10px;">소형견 사회화 모임</p>
+                        <img src="assets/img/a.jpg" width="250px" height="250px" style="border-radius: 40px;" />
+                        <p style="text-align: center; font-size: 20px; font-weight: bold; padding-top: 10px;">SPORTS</p>
                     </a>
                 </div>
                 <div class="club">
                     <a href="#">
-                        <img src="assets/img/b.jpg" width="250px" height="250px" />
-                        <p style="text-align: center; font-size: 20px; font-weight: bold; padding-top: 10px;">고심이 등반 클럽</p>
+                        <img src="assets/img/b.jpg" width="250px" height="250px" style="border-radius: 40px;" />
+                        <p style="text-align: center; font-size: 20px; font-weight: bold; padding-top: 10px;">STUDY</p>
                     </a>
                 </div>
                 <div class="club">
                     <a href="#">
-                        <img src="assets/img/c.jpg" width="250px" height="250px" />
-                        <p style="text-align: center; font-size: 20px; font-weight: bold; padding-top: 10px;">와인의 모든것</p>
+                        <img src="assets/img/c.jpg" width="250px" height="250px" style="border-radius: 40px;" />
+                        <p style="text-align: center; font-size: 20px; font-weight: bold; padding-top: 10px;">FOOD</p>
                     </a>
                 </div>
                 <div class="club">
                     <a href="#">
-                        <img src="assets/img/d.jpg" width="250px" height="250px" />
-                        <p style="text-align: center; font-size: 20px; font-weight: bold; padding-top: 10px;">정처기 한 달 처리팀</p>
+                        <img src="assets/img/d.jpg" width="250px" height="250px" style="border-radius: 40px;" />
+                        <p style="text-align: center; font-size: 20px; font-weight: bold; padding-top: 10px;">PETS</p>
                     </a>
                 </div>
                 <div class="club">
                     <a href="#">
-                        <img src="assets/img/e.jpg" width="250px" height="250px" />
-                        <p style="text-align: center; font-size: 20px; font-weight: bold; padding-top: 10px;">아랍어를 사랑하는 모임</p>
+                        <img src="assets/img/e.jpg" width="250px" height="250px" style="border-radius: 40px;" />
+                        <p style="text-align: center; font-size: 20px; font-weight: bold; padding-top: 10px;">CAMPING</p>
                     </a>
                 </div>
                 <div class="club">
                     <a href="#">
-                        <img src="assets/img/f.jpg" width="250px" height="250px" />
-                        <p style="text-align: center; font-size: 20px; font-weight: bold; padding-top: 10px;">전국일등 조기축구</p>
-                    </a>
-                </div>
-                <div class="club">
-                    <a href="create_club1.do">
-                        <img src="assets/img/plus.png" width="200px" height="200px" />
-                        <br /><br /><br />
-                        <p style="text-align: center; font-size: 20px; font-weight: bold; padding-top: 10px;">new 클럽만들기</p>
+                        <img src="assets/img/f.jpg" width="250px" height="250px" style="border-radius: 40px;" />
+                        <p style="text-align: center; font-size: 20px; font-weight: bold; padding-top: 10px;">ETC</p>
                     </a>
                 </div>
             </div>
