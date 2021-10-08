@@ -105,10 +105,12 @@
         place-self: start center;
     }
 
-    .menu {
+     .menu {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         text-align: center;
+        font-weight: bold;
+        margin-bottom: 10px;
     }
 
     .write {
@@ -124,6 +126,12 @@
         display: grid;
         place-content: center;
     }
+
+    .write-bottom {
+        display: grid;
+        place-self: start end;
+    }
+
     .club-post {
         display: grid;
         background-color: lightgray;
@@ -160,19 +168,20 @@
     .comment {
         display: grid;
         grid-template-columns: 1fr 4fr;
-
+        padding-top: 20px;
 
     }
 
-    .c.profile {
+    .c-profile {
         display: grid;
-        place-self: start middle;
+        place-self: start center;
         text-align: center;
     }
 
-    .c.comment {
+    .c-comment {
         display: grid;
         vertical-align: middle;
+
 
     }
     </style>
@@ -182,10 +191,10 @@
     <div class="container">
         <div class="header">
             <div class="h-logo">
-                <a href="main.html" style="font-size: 40px;"><b>Udon</b></a>
+                <a href="main.do" style="font-size: 40px;"><b>Udon</b></a>
             </div>
             <div class="h-menu">
-                <span><a href="myclub.html" style="font-size: 20px;">my우동클</a></span>
+                <span><a href="myclub.do" style="font-size: 20px;">my우동클</a></span>
                 <span><a href="#" style="font-size: 20px;">우동클모집</a></span>
                 <span><a href="#" style="font-size: 20px;">우동커뮤니티</a></span>
             </div>
@@ -197,7 +206,7 @@
         <div class="main">
             <div class="m-left">
                 <div class="profile">
-                    <span style="text-align: center"><img src="../assets/img/a.jpg" width="250px" height="250px" /></span>
+                    <span style="text-align: center"><img src="assest/img/a.jpg" width="250px" height="250px" /></span>
                     <p style="text-align: center; font-size: 20px; font-weight: bold; padding-top: 10px;">소형견 사회화 모임</p>
                 </div>
                 <div class="profile-des">
@@ -215,21 +224,21 @@
                 </div>
                 <div class="write">
                     <div class="write-box">
-                        <input type="text" name="posting" placeholder="내용을 입력해주세요" style="height: 100px; border-radius: 5px; border: none;" />
+                        <input type="text" name="posting" placeholder="내용을 입력해주세요" style="height: 150px; width:500px; border-radius: 5px; border: none;" />
                     </div>
                     <div class="write-bottom">
-                        <button class="btn btn-info disabled btn-sm">글쓰기</button>
+                        <button type="submit" class="btn btn-info disabled btn-sm">글쓰기</button>
                     </div>
                 </div>
                 <div class="club-post">
                     <div class="post">
                         <div class="profile-photo">
-                            <span><img src="../assets/img/a.jpg" width="50px" height="50px" style="border-radius: 20px;"></span>
+                            <span><img src="assets/img/a.jpg" width="50px" height="50px" style="border-radius: 20px;"></span>
                             <p>고심일등사랑</p>
                         </div>
                         <div class="post-right">
                             <p style="font-size: 12px;">2021년 10월 07일 21시22분</p>
-                            <span><img src="../assets/img/c-ramen.jpg" width="400px" height="300px"></span>
+                            <span><img src="assets/img/c-ramen.jpg" width="400px" height="300px"></span>
                         </div>
                     </div>
                     <div class="journal">
@@ -238,14 +247,14 @@
                     <div class="comments">
                         <span style="padding: 0 20px;"><a href="#">좋아요(21)</a></span>
                         <span><a href="#">댓글(1)</a></span>
-                        <div class="comment">
-                            <div class="c.profile">
-                                <span><img src="../assets/img/b.jpg" width="50px" height="50px"></span>
-                                <p style="font-size: 15px;">고심이등사랑</p>
-                            </div>
-                            <div class="c.comment">
-                                <span>오우 완전 맛있겠는데용? 고고!</span>
-                            </div>
+                    </div>
+                    <div class="comment">
+                        <div class="c-profile">
+                            <span><img src="assets/img/b.jpg" width="40px" height="40px"></span>
+                            <p style="font-size: 15px;">고심이등사랑</p>
+                        </div>
+                        <div class="c-comment">
+                            <span>오우 완전 맛있겠는데용? 고고!</span>
                         </div>
                     </div>
                 </div>

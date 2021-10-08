@@ -31,5 +31,10 @@ public class HomeController {
 		
 		return "club_detail";
 	}
-	
+	@RequestMapping(value = "/create_club1.do", method = RequestMethod.GET)
+	public String create_club1() {
+		
+		
+		return "create_club1";
+	}
 }
