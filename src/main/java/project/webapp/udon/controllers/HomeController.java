@@ -31,10 +31,25 @@ public class HomeController {
 		
 		return "club_detail";
 	}
+	//로그인
 	@RequestMapping(value = "/login.do", method = RequestMethod.GET)
 	public String login() {
 		
 		
 		return "login";
+	}
+	//회원가입 페이지
+	@RequestMapping(value = "/register.do", method = RequestMethod.GET)
+	public String register() {
+		
+		
+		return "register";
+	}
+	//아이디, 비밀번호 찾기
+	@RequestMapping(value = "/find_account.do", method = RequestMethod.GET)
+	public String find_account() {
+		
+		
+		return "find_account";
 	}
 }
