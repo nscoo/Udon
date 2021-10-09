@@ -27,7 +27,6 @@ public class HomeController {
 		
 		return "club_detail";
 	}
-
 	@RequestMapping(value = "/create_club1.do", method = RequestMethod.GET)
 	public String create_club1() {
 		
@@ -41,5 +40,19 @@ public class HomeController {
 		
 		return "login";
 
+	}
+	//회원가입 페이지
+	@RequestMapping(value = "/register.do", method = RequestMethod.GET)
+	public String register() {
+		
+		
+		return "register";
+	}
+	//아이디, 비밀번호 찾기
+	@RequestMapping(value = "/find_account.do", method = RequestMethod.GET)
+	public String find_account() {
+		
+		
+		return "find_account";
 	}
 }
