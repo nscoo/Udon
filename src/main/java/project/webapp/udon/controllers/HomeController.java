@@ -1,7 +1,6 @@
 package project.webapp.udon.controllers;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -34,6 +33,14 @@ public class HomeController {
 		
 		return "create_club1";
 	}
+	
+	@RequestMapping(value = "/create_club2.do", method = RequestMethod.GET)
+	public String create_club2() {
+		
+		
+		return "create_club2";
+	}
+
 
 	@RequestMapping(value = "/login.do", method = RequestMethod.GET)
 	public String login() {

@@ -90,7 +90,7 @@
 
     .m-top {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+
         place-self: start center;
         width: 100%;
         margin-bottom: 10px;
@@ -148,38 +148,38 @@
             </div>
             <div class="m-blocks">
                 <div class="club">
-                    <a href="club_detail.do">
-                        <img src="assets/img/a.jpg" width="250px" height="250px" style="border-radius: 40px;" />
+                    <a href="${pageContext.request.contextPath}/create_club2.do">
+                        <img src="assets/img/sports.png" width="200px" height="200px" style="border-radius: 40px; background-color: mediumpurple; padding: 20px;" />
                         <p style="text-align: center; font-size: 20px; font-weight: bold; padding-top: 10px;">SPORTS</p>
                     </a>
                 </div>
                 <div class="club">
                     <a href="#">
-                        <img src="assets/img/b.jpg" width="250px" height="250px" style="border-radius: 40px;" />
+                        <img src="assets/img/study.png" width="200px" height="200px" style="border-radius: 40px; background-color: mediumpurple; padding: 20px;" />
                         <p style="text-align: center; font-size: 20px; font-weight: bold; padding-top: 10px;">STUDY</p>
                     </a>
                 </div>
                 <div class="club">
                     <a href="#">
-                        <img src="assets/img/c.jpg" width="250px" height="250px" style="border-radius: 40px;" />
+                        <img src="assets/img/food.png" width="200px" height="200px" style="border-radius: 40px; background-color: mediumpurple; padding: 20px;" />
                         <p style="text-align: center; font-size: 20px; font-weight: bold; padding-top: 10px;">FOOD</p>
                     </a>
                 </div>
                 <div class="club">
                     <a href="#">
-                        <img src="assets/img/d.jpg" width="250px" height="250px" style="border-radius: 40px;" />
+                        <img src="assets/img/pets.png" width="200px" height="200px" style="border-radius: 40px; background-color: mediumpurple; padding: 20px;" />
                         <p style="text-align: center; font-size: 20px; font-weight: bold; padding-top: 10px;">PETS</p>
                     </a>
                 </div>
                 <div class="club">
                     <a href="#">
-                        <img src="assets/img/e.jpg" width="250px" height="250px" style="border-radius: 40px;" />
+                        <img src="assets/img/camping.jpg" width="200px" height="200px" style="border-radius: 40px; background-color: mediumpurple; padding: 20px;" />
                         <p style="text-align: center; font-size: 20px; font-weight: bold; padding-top: 10px;">CAMPING</p>
                     </a>
                 </div>
                 <div class="club">
                     <a href="#">
-                        <img src="assets/img/f.jpg" width="250px" height="250px" style="border-radius: 40px;" />
+                        <img src="assets/img/etc.png" width="200px" height="200px" style="border-radius: 40px; padding: 20px; background-color: mediumpurple;" />
                         <p style="text-align: center; font-size: 20px; font-weight: bold; padding-top: 10px;">ETC</p>
                     </a>
                 </div>
