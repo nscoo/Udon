@@ -81,11 +81,10 @@
 
     }
 
-    .login{
-    display: grid;
-    place-content : center;
-    gap: 40px;
-    padding: 80px 25px 80px 25px;
+	.edit_box{
+	display: grid;
+    grid-template-columns: max-content;
+    place-content: center;
 	}
     </style>
 </head>
@@ -106,16 +105,19 @@
                 <span><a href="${pageContext.request.contextPath}/mypage.do">내정보</a></span>
             </div>
         </div>
-                 <div id="regist_box">
+                 <div class="edit_box">
                 <div>
-                    <h3>회원가입</h3>
+                    <h3>내정보 수정</h3>
                 </div>
                 <div id="btn_box">
-                     <form method="post" role="form" id="regForm" action="${pageContext.request.contextPath}/registAction.do">
+                            <form method="post" role="form" id="edit" action="${pageContext.request.contextPath}/updateAction.do" >
                         <div class="form-group">
-                            <label for="inputID">아이디</label>
-                            <input type="text" class="form-control" id="userid" name="userid" placeholder="ID입력하세요">
-                            <button class="idChk" type="button" id="idChk" onclick="fn_idChk();" value="N">중복확인</button>
+                            <label for="inputName">이름</label>
+                            <input type="text" class="form-control" id="username" name="username" value="${member.username}" readonly>
+                        </div>
+                     	<div class="form-group">
+                            <label for="inputId">아이디</label>
+                            <input type="text" class="form-control" id="userid" name="userid" value="${member.userid}" readonly>
                         </div>
                         <div class="form-group">
                             <label for="inputPassword">비밀번호</label>
@@ -123,47 +125,33 @@
                         </div>
                         <div class="form-group">
                             <label for="inputPassword">비밀번호확인</label>
-                            <input type="password" class="form-control" id="user_ch_pw" name="user_ch_pw" placeholder="비밀번호 재입력" style="font-family: emoji;"> 
-                        </div>
-                        <div class="form-group">
-                            <label for="name">이름</label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="이름입력">
-                        </div>
-                        <div class="form-group">
-                            <label for="sex">성별</label><br>
-						  <input type="radio" id="male" name="gender" value="male">
-						  <label for="male">Male</label>
-						  <input type="radio" id="female" name="gender" value="female">	
-						  <label for="female">Female</label><br>
+                            <input type="password" class="form-control" id="user_ch_pw" name="user_ch_pw" placeholder="비밀번호 재입력" style="font-family: emoji;">
                         </div>
                         <div class="form-group">
                             <label for="inputMobile">휴대폰 번호</label>
-                            <input type="tel" class="form-control" name="tel" id="tel" placeholder="휴대폰번호를 입력해 주세요">
+                            <input type="tel" class="form-control" name="tel" id="tel" placeholder="휴대폰번호를 입력해 주세요" value="${member.tel}">
                         </div>
-                        <div class="form-group">
-                            <label for="inputBirthday">생년 월일</label>
-                            <input type="date" class="form-control" name="birthdate" id="birthdate" placeholder="생년월일입력">
-                        </div>
+                       <div class="form-group">
+                            <label for="inputemail" id="icon_search">이메일</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="이메일을 입력해주세요" >
+                           
                         <div class="form-group" id="icon_search">
-                            <label for="inputhome">집 주소 </label>
-                            <input type="text" class="form-control" name="addr_h" id="addr_h" placeholder="집 주소를 입력하세요"   onclick="execution_daum_address_h()">
+                            <label for="inputadd">집 주소 </label>
+                            <input type="text" class="form-control" id="addr_h" name="addr_h" placeholder="집 주소를 입력하세요" value="${member.addr_h}" onclick="execution_daum_address_h()" >
                             
                         </div>
-                        <div class="form-group">
-                            <label for="inputcom" id="icon_search">회사 주소 </label>
-                            <input type="text" class="form-control" id="addr_c" name="addr_c" placeholder="회사 주소를 입력하세요"  onclick="execution_daum_address_c()">
-                           
+                        </div>
+                        <div id="regist_button">
+                            <button type="submit" id="submit" class="btn btn-primary">
+                                정보 수정<i class="fa fa-check spaceLeft"></i>
+                            </button>
+                            <button type="button" id="delete" class="btn btn-warning" onclick="location.href='${pageContext.request.contextPath}/delete.do'">
+                                회원탈퇴<i class="fa fa-times spaceLeft"></i>
+                            </button>
                         </div>
                        
                     </form>
-                     <div id="regist_button">
-                            <button type="submit" id="submit" class="btn btn-primary">
-                                회원가입<i class="fa fa-check spaceLeft"></i>
-                            </button>
-                            <button type="submit" id="submit" class="cencle btn btn-warning">
-                                가입취소<i class="fa fa-times spaceLeft"></i>
-                            </button>
-                        </div>
+
                 </div>
             </div>
         </div>
