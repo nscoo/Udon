@@ -26,6 +26,14 @@ public class HomeController {
 		
 		return "club_detail";
 	}
+	
+	@RequestMapping(value = "/club_members.do", method = RequestMethod.GET)
+	public String club_members() {
+		
+		
+		return "club_members";
+	}
+	
 	@RequestMapping(value = "/create_club1.do", method = RequestMethod.GET)
 	public String create_club1() {
 		
@@ -39,6 +47,8 @@ public class HomeController {
 		
 		return "create_club2";
 	}
+	
+	
 
 
 	@RequestMapping(value = "/login.do", method = RequestMethod.GET)
