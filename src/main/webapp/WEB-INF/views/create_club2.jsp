@@ -90,7 +90,7 @@
 
     .m-top {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 3fr;
         place-self: start center;
         width: 100%;
         margin-bottom: 10px;
@@ -102,25 +102,38 @@
 
     }
 
-    .top-right {
-        display: grid;
-        place-self: start end;
-    }
-
-    .top-right>a:hover {
+    .top-left>a:hover {
         color: purple;
     }
 
-    .m-blocks {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
+    .top-right {
+        display: grid;
+        place-self: start;
     }
 
-    .club {
-        flex-grow: 1 1 1;
-        padding: 25px;
+    .top-right>input {
+        border: none;
+        font-size: 30px;
+    }
 
+    .radio {
+        display: inline-block;
+    }
+
+    .club-des {
+        display: grid;
+        padding-top: 50px;
+    }
+
+    .club-name {
+        display: grid;
+        place-self: start;
+    }
+
+    .club-name>input {
+        border: none;
+        font-size: 20px;
+        width: 500px;
     }
     </style>
 </head>
@@ -129,66 +142,48 @@
     <div class="container">
         <div class="header">
             <div class="h-logo">
-                <a href="${pageContext.request.contextPath}" style="font-size: 40px;"><b>Udon</b></a>
+                <a href="main.do" style="font-size: 40px;"><b>Udon</b></a>
             </div>
             <div class="h-menu">
-                <span><a href="${pageContext.request.contextPath}/myclub.do" style="font-size: 20px;">my우동클</a></span>
+                <span><a href="myclub.do" style="font-size: 20px;">my우동클</a></span>
                 <span><a href="#" style="font-size: 20px;">우동클모집</a></span>
                 <span><a href="#" style="font-size: 20px;">우동커뮤니티</a></span>
             </div>
             <div class="h-login">
-                <span><a href="${pageContext.request.contextPath}/login.do">Login</a></span>
-                <span><a href="${pageContext.request.contextPath}/mypage.do">내정보</a></span>
+                <span><a href="#">Login</a></span>
+                <span><a href="#">내정보</a></span>
             </div>
         </div>
         <div class="main">
             <div class="m-top">
-                <div class="top-left" style="font-size: 25px; font-weight: bold;">My클럽리스트</div>
-                <div class="top-right"><a href="#">⚙목록편집</a></div>
+                <div class="top-left">
+                    <span>
+                        <img src="assets/img/a.jpg" width="250px" height="250px">
+                    </span>
+                    <a href="#">
+                        <p style="text-align: right; font-weight: bold;">사진추가</p>
+                    </a>
+                </div>
+                <div class="top-right">
+                    <span>
+                        <p style="font-size: 20px;"><b>클럽이름</b></p>
+                    </span>
+                    <input type="text" name="clubname" placeholder="클럽명을 입력하세요" />
+                    <hr />
+                    <div class="radio">
+                        <input type="radio" name="public" />
+                        <label for="private">비공개 클럽(멤버만 멤버를 확인 가능)</label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" name="public" />
+                        <label for="public">공개 클럽(누구나) 멤버를 확인 가능)</label>
+                    </div>
+                </div>
             </div>
-            <div class="m-blocks">
-                <div class="club">
-                    <a href="${pageContext.request.contextPath}/club_detail.do">
-                        <img src="assets/img/a.jpg" width="250px" height="250px" />
-                        <p style="text-align: center; font-size: 20px; font-weight: bold; padding-top: 10px;">소형견 사회화 모임</p>
-                    </a>
-                </div>
-                <div class="club">
-                    <a href="${pageContext.request.contextPath}/club_detail.do">
-                        <img src="assets/img/b.jpg" width="250px" height="250px" />
-                        <p style="text-align: center; font-size: 20px; font-weight: bold; padding-top: 10px;">고심이 등반 클럽</p>
-                    </a>
-                </div>
-                <div class="club">
-                    <a href="${pageContext.request.contextPath}/club_detail.do">
-                        <img src="assets/img/c.jpg" width="250px" height="250px" />
-                        <p style="text-align: center; font-size: 20px; font-weight: bold; padding-top: 10px;">와인의 모든것</p>
-                    </a>
-                </div>
-                <div class="club">
-                    <a href="${pageContext.request.contextPath}/club_detail.do">
-                        <img src="assets/img/d.jpg" width="250px" height="250px" />
-                        <p style="text-align: center; font-size: 20px; font-weight: bold; padding-top: 10px;">정처기 한 달 처리팀</p>
-                    </a>
-                </div>
-                <div class="club">
-                    <a href="${pageContext.request.contextPath}/club_detail.do">
-                        <img src="assets/img/e.jpg" width="250px" height="250px" />
-                        <p style="text-align: center; font-size: 20px; font-weight: bold; padding-top: 10px;">아랍어를 사랑하는 모임</p>
-                    </a>
-                </div>
-                <div class="club">
-                    <a href="${pageContext.request.contextPath}/club_detail.do">
-                        <img src="assets/img/f.jpg" width="250px" height="250px" />
-                        <p style="text-align: center; font-size: 20px; font-weight: bold; padding-top: 10px;">전국일등 조기축구</p>
-                    </a>
-                </div>
-                <div class="club">
-                    <a href="${pageContext.request.contextPath}/create_club1.do">
-                        <img src="assets/img/plus.png" width="200px" height="200px" />
-                        <br /><br /><br />
-                        <p style="text-align: center; font-size: 20px; font-weight: bold; padding-top: 10px;">new 클럽만들기</p>
-                    </a>
+            <div class="club-des">
+                <div class="club-name">
+                    <p style="font-size: 20px;"><b>클럽 소개글</b></p>
+                    <input type="text" name="clubdes" placeholder="이곳에 클럽 소개글을 작성해주세요!">
                 </div>
             </div>
         </div>
