@@ -82,13 +82,25 @@
 
     }
 
-	.find_account {
+	.find_account{
 		display: grid;
-	    place-content: center;
-	    gap: 40px;
-	    padding: 80px 25px 80px 25px;
+	    grid-template-columns: repeat(2,1fr);
 	}
-
+	.find_id{
+	    display: grid;
+	    place-self: start center;
+	    width: 70%;
+	}
+	.find_pw{
+		display: grid;
+	    place-self: start center;
+	    width: 70%;
+	}
+	.btn-primary{
+	color: #fff;
+    background-color: #996fe5;
+    border-color: #865ad4;
+    }
     </style>
 </head>
 
@@ -109,10 +121,11 @@
             </div>
         </div>
 		<div class="find_account">
+			<div class="find_id">
             <!-- 아이디 찾기 -->
             <form method="post" role="form" id="find_id" action="${pageContext.request.contextPath}/find_idAction.do">
                 <fieldset>
-                    <legend>이름</legend>
+                    <legend>아이디 찾기</legend>
                     <div class="form-group">
                         <label for="user_name">이름</label>
                         <input type="text" id="user_name" name="user_name" class="form-control" placeholder="이름을 입력하세요." />
@@ -132,14 +145,19 @@
                     </div>
                 </fieldset>
             </form>
-
+           </div>
+			<div class="find_pw">
             <!-- 비밀번호 찾기 -->
             <form method="post" role="form" id="find_pw" action="${pageContext.request.contextPath}/find_pwAction.do">
                 <fieldset>
-                    <legend>이름</legend>
+                    <legend>비밀번호 찾기</legend>
                     <div class="form-group">
                         <label for="user_name">이름</label>
                         <input type="text" id="user_name" name="user_name" class="form-control" placeholder="이름을 입력하세요." />
+                    </div>
+                    <div class="form-group">
+                        <label for="tel">전화번호</label>
+                        <input type="tel" class="form-control" name="tel" id="tel" placeholder="휴대폰번호를 입력해 주세요">
                     </div>
                     <div class="form-group">
                         <label for="email">이메일</label>
@@ -152,6 +170,7 @@
                     </div>
                 </fieldset>
             </form>
+            </div>
         </div>
         </div>
         <hr />

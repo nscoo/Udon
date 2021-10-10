@@ -72,4 +72,11 @@ public class HomeController {
 		
 		return "find_account";
 	}
+	//마이 페이지
+	@RequestMapping(value = "/mypage.do", method = RequestMethod.GET)
+	public String mypage() {
+		
+		
+		return "mypage";
+	}
 }
