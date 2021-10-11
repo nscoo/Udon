@@ -79,4 +79,11 @@ public class HomeController {
 		
 		return "mypage";
 	}
+	//게시글 상세
+	@RequestMapping(value = "/detail_board.do", method = RequestMethod.GET)
+	public String detail_board() {
+		
+		
+		return "detail_board";
+	}
 }
