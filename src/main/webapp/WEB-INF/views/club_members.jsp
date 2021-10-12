@@ -117,11 +117,30 @@
         display: grid;
         background-color: #f0f0f0;
         padding: 30px;
-
+        vertical-align: middle;
 
     }
 
+    .s-top {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 
+    .s-top>p {
+        display: grid;
+        place-self: start;
+
+    }
+
+    .s-top>a {
+        display: grid;
+        place-self: start end;
+    }
+
+    .r-search {
+        padding-bottom: 20px;
+        vertical-align: middle;
+    }
 
     .r-search>input {
         border: none;
@@ -132,11 +151,39 @@
         width: 70%;
     }
 
+    .r-member {
+        display: grid;
+        grid-template-columns: 0.2fr 0.8fr 2fr 1fr;
+        margin: 13px;
+        vertical-align: middle;
+    }
 
+    .r-member>a {
+        display: grid;
+        place-self: start end;
+    }
 
     .r-member>a:hover {
         color: purple;
         font-weight: bold;
+    }
+
+    .photo {
+        display: grid;
+        place-self: start;
+    }
+
+    .name {
+        display: grid;
+        place-self: start;
+        font-size: 18px;
+        vertical-align: middle;
+    }
+
+    .state {
+        display: grid;
+        place-self: start center;
+        vertical-align: middle;
     }
     </style>
 </head>
@@ -164,53 +211,86 @@
                     <p style="text-align: center; font-size: 20px; font-weight: bold; padding-top: 10px;">소형견 사회화 모임</p>
                 </div>
                 <div class="profile-des">
-                    <a href="#"><p>멤버 41</p></a>
+                    <a href="#">
+                        <p>멤버 41</p>
+                    </a>
                     <p>클럽과 게시물이 공개되지 않습니다.
                         <br />초대로만 가입이 가능합니다.</p>
                 </div>
             </div>
             <div class="m-right">
                 <div class="r-search">
-                    <p>멤버 41</p>
+                    <div class="s-top">
+                        <p>멤버 41</p>
+                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#invite">초대하기</button>
+                        <div class="modal fade" id="invite" tabindex="-1" role="dialog" aria-labelledby="inviteModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="inviteModalLabel">Modal title</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        회원 클럽 초대하기
+                                    </div>
+                                    <div class="modal-footer">
+                                        <input type="text" name="invitation" placeholder="id로 초대해주세요" />
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+                                        <button type="button" class="btn btn-primary">초대</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <button type="submit" name="search"><img src="assets/img/mag.png" width="40px" height="40px" style="background-color: mediumpurple; padding: 10px;"></button><input type="text" name="search" placeholder="검색할 멤버를 입력해주세요" />
                 </div>
                 <div class="r-member">
-                    <span style="display: inline-block;"><img src="assets/img/b.jpg" width="40px" height="40px" style="border-radius: 30px;"></span>
-                    <p style="display: inline-block; font-size: 20px;"><b>최고심</b></p>
-                    <p style="display: inline-block; padding: 20px;">오늘은 내가 짜파게티 요리사</p>
-                    <a href="#" style="display: inline-block; padding: 0 20px;">
-                        <p>탈퇴하기</p>
-                    </a>
-                </div>
-                <div class="r-member">
-                    <span style="display: inline-block;"><img src="assets/img/c.jpg" width="40px" height="40px" style="border-radius: 30px;"></span>
-                    <p style="display: inline-block; font-size: 20px;"><b>이고심</b></p>
-                    <p style="display: inline-block; padding: 20px;">오늘은 내가 짜파게티 요리사</p>
-                    <a href="#" style="display: inline-block; padding: 0 20px;">
+                    <span class="photo"><img src="assets/img/b.jpg" width="40px" height="40px" style="border-radius: 30px;"></span>
+                    <p class="name"><b>최고심</b></p>
+                    <p class="state">오늘은 내가 짜파게티 요리사</p>
+                    <a href="#">
                         <p>메세지</p>
                     </a>
                 </div>
                 <div class="r-member">
-                    <span style="display: inline-block;"><img src="assets/img/d.jpg" width="40px" height="40px" style="border-radius: 30px;"></span>
-                    <p style="display: inline-block; font-size: 20px;"><b>박고심</b></p>
-                    <p style="display: inline-block; padding: 20px;">오늘은 내가 짜파게티 요리사</p>
-                    <a href="#" style="display: inline-block; padding: 0 20px;">
+                    <span class="photo"><img src="assets/img/c.jpg" width="40px" height="40px" style="border-radius: 30px;"></span>
+                    <p class="name"><b>또고심</b></p>
+                    <p class="state">...</p>
+                    <a href="#">
                         <p>메세지</p>
                     </a>
                 </div>
                 <div class="r-member">
-                    <span style="display: inline-block;"><img src="assets/img/e.jpg" width="40px" height="40px" style="border-radius: 30px;"></span>
-                    <p style="display: inline-block; font-size: 20px;"><b>김고심</b></p>
-                    <p style="display: inline-block; padding: 20px;">오늘은 내가 짜파게티 요리사</p>
-                    <a href="#" style="display: inline-block; padding: 0 20px;">
+                    <span class="photo"><img src="assets/img/d.jpg" width="40px" height="40px" style="border-radius: 30px;"></span>
+                    <p class="name"><b>노상철</b></p>
+                    <p class="state">오늘은 내가 홈런볼</p>
+                    <a href="#">
                         <p>메세지</p>
                     </a>
                 </div>
                 <div class="r-member">
-                    <span style="display: inline-block;"><img src="assets/img/f.jpg" width="40px" height="40px" style="border-radius: 30px;"></span>
-                    <p style="display: inline-block; font-size: 20px;"><b>최고심</b></p>
-                    <p style="display: inline-block; padding: 20px;">오늘은 내가 짜파게티 요리사</p>
-                    <a href="#" style="display: inline-block; padding: 0 20px;">
+                    <span class="photo"><img src="assets/img/e.jpg" width="40px" height="40px" style="border-radius: 30px;"></span>
+                    <p class="name"><b>이뚜띤</b></p>
+                    <p class="state">오늘은 뭘 포스팅하지?</p>
+                    <a href="#">
+                        <p>메세지</p>
+                    </a>
+                </div>
+                <div class="r-member">
+                    <span class="photo"><img src="assets/img/f.jpg" width="40px" height="40px" style="border-radius: 30px;"></span>
+                    <p class="name"><b>김고심</b></p>
+                    <p class="state">잠수중</p>
+                    <a href="#">
+                        <p>메세지</p>
+                    </a>
+                </div>
+                <div class="r-member">
+                    <span class="photo"><img src="assets/img/a.jpg" width="40px" height="40px" style="border-radius: 30px;"></span>
+                    <p class="name"><b>이고심</b></p>
+                    <p class="state">hello I'm fine Thank you and you?</p>
+                    <a href="#">
                         <p>메세지</p>
                     </a>
                 </div>
