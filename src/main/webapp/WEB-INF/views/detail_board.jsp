@@ -2,13 +2,11 @@
 	pageEncoding="UTF-8"%>
 <%@ page trimDirectiveWhitespaces="true"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
 <!DOCTYPE html>
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no, target-density=medium-dpi">
     <title>Udon</title>
     <link rel="icon" href="assets/img/favicon-16x16.png" sizes="16x16">
@@ -16,6 +14,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="common.css">
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
     <style type="text/css">
     @font-face {
         font-family: 'GmarketSansMedium';
@@ -86,6 +87,7 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         padding-top: 50px;
+        height: 70px;
     }
 
     .detail_tite>p {
@@ -106,6 +108,32 @@
         display: inline-grid;
         grid-template-columns: repeat(3, 1fr);
 
+    }
+
+    .comment_icon>p {
+        margin-left: 20px;
+    }
+
+    .comment_area {
+        padding-top: 20px;
+    }
+
+    .detail_content {
+        display: grid;
+        height: 300px;
+    }
+
+    #new-comment {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        height: 113px;
+        width: 1140px;
+        display: grid;
+    }
+
+    .comment-row {
+        padding-top: 50px;
+        padding-bottom: 10px;
     }
     </style>
 </head>
@@ -138,21 +166,34 @@
         </div>
         <hr>
         <div class="detail_tite">
-            <h4>아니 근데 있잖아...</h4>
+            <h4>아니 근데 있잖아...</h3>
                 <p>2분전</p>
         </div>
         <div class="detail_content">
             <p>트고 꽃 피고 새 우는 봄날의 천지는 얼마나 기쁘며 얼마나 아름다우냐? 이것을 얼음 속에서 불러 내는 것이 따뜻한 봄바람이다 인생에 따뜻한 봄바람을 불어 보내는 것은 청춘의 끓는 피다 청춘의 피가 뜨거운지라 인간의</p>
         </div>
-        <hr>
-        <div class="comment_icon">
-            <p>좋아요</p>
-            <p>댓글</p>
-            <p>조회</p>
-        </div>
-        <div class="comment">
-            <h4>아이디</h4>
-            <p>어쩌구 저쩌구 이러쿵 저러쿵</p>
+        <div class="comment_area">
+            <div class="comment_icon">
+                <p>좋아요</p>
+                <p>댓글</p>
+                <p>조회</p>
+            </div>
+            <div class="comment">
+                <div class="comment-row">
+                    <textarea id="new-comment" name="new-comment" rows=5 placeholder="New Comment"></textarea>
+                    <button type="submit">작성 완료</button>
+                </div>
+                <div class="comment-row">
+                    <div class="comment-date">사용자 아이디</div>
+                    <div class="comment-content">우와 대박이에용</div>
+                    <div class="comment-date">2021-10-12 14:44:01</div>
+                </div>
+                <div class="comment-row">
+                    <div class="comment-date">사용자 아이디</div>
+                    <div class="comment-content">우와 대박이에용</div>
+                    <div class="comment-date">2021-10-12 14:44:01</div>
+                </div>
+            </div>
         </div>
     </div>
     <hr />
