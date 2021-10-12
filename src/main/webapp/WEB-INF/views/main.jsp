@@ -182,7 +182,7 @@
             </div>
             <div class="h-menu">
                 <span><a href="${pageContext.request.contextPath}/myclub.do" style="font-size: 20px;">my우동클</a></span>
-                <span><a href="#" style="font-size: 20px;">우동클모집</a></span>
+                <span><a href="${pageContext.request.contextPath}/club_recruit.do" style="font-size: 20px;">우동클모집</a></span>
                 <span><a href="#" style="font-size: 20px;">우동커뮤니티</a></span>
             </div>
             <div class="h-login">
