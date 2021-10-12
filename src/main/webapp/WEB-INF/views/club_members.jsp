@@ -137,6 +137,15 @@
         place-self: start end;
     }
 
+    .s-top>button {
+        display: grid;
+        place-self: start end;
+    }
+
+    .modal-body {
+        text-align: center;
+    }
+
     .r-search {
         padding-bottom: 20px;
         vertical-align: middle;
@@ -150,6 +159,7 @@
         margin-left: -7px;
         width: 70%;
     }
+
 
     .r-member {
         display: grid;
@@ -196,7 +206,7 @@
             </div>
             <div class="h-menu">
                 <span><a href="myclub.do" style="font-size: 20px;">my우동클</a></span>
-                <span><a href="#" style="font-size: 20px;">우동클모집</a></span>
+                <span><a href="${pageContext.request.contextPath}/club_recruit.do" style="font-size: 20px;">우동클모집</a></span>
                 <span><a href="#" style="font-size: 20px;">우동커뮤니티</a></span>
             </div>
             <div class="h-login">
@@ -222,23 +232,25 @@
                 <div class="r-search">
                     <div class="s-top">
                         <p>멤버 41</p>
-                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#invite">초대하기</button>
-                        <div class="modal fade" id="invite" tabindex="-1" role="dialog" aria-labelledby="inviteModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
+                        <!-- 팝업실행버튼 -->
+                        <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            초대하기
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="inviteModalLabel">Modal title</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
+                                        <h5 class="modal-title" id="exampleModalLabel">클럽 회원 초대하기</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        회원 클럽 초대하기
+                                        <label for="id">ID</label>
+                                        <input type="text" name="id" placeholder="ID를 이곳에 입력해주세요" style="border: none; ">
                                     </div>
                                     <div class="modal-footer">
-                                        <input type="text" name="invitation" placeholder="id로 초대해주세요" />
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
-                                        <button type="button" class="btn btn-primary">초대</button>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+                                        <button type="button" class="btn btn-primary">초대하기</button>
                                     </div>
                                 </div>
                             </div>
