@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no, target-density=medium-dpi">
     <title>Udon</title>
-    <link rel="icon" href="assets/img/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" href="resources/img/favicon-16x16.png" sizes="16x16">
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -37,6 +37,7 @@
         text-decoration: none;
         color: black;
     }
+    
 
     button {
         border: 0;
@@ -191,10 +192,10 @@
     <div class="container">
         <div class="header">
             <div class="h-logo">
-                <a href="main.do" style="font-size: 40px;"><b>Udon</b></a>
+                <a href="${pageContext.request.contextPath}" style="font-size: 40px;"><b>Udon</b></a>
             </div>
             <div class="h-menu">
-                <span><a href="myclub.do" style="font-size: 20px;">my우동클</a></span>
+                <span><a href="${pageContext.request.contextPath}/myclub.do" style="font-size: 20px;">my우동클</a></span>
                 <span><a href="${pageContext.request.contextPath}/club_recruit.do" style="font-size: 20px;">우동클모집</a></span>
                 <span><a href="#" style="font-size: 20px;">우동커뮤니티</a></span>
             </div>
@@ -206,7 +207,7 @@
         <div class="main">
             <div class="m-left">
                 <div class="profile">
-                    <span style="text-align: center"><img src="assest/img/a.jpg" width="250px" height="250px" /></span>
+                    <span style="text-align: center"><img src="resources/img/a.jpg" width="250px" height="250px" /></span>
                     <p style="text-align: center; font-size: 20px; font-weight: bold; padding-top: 10px;">소형견 사회화 모임</p>
                 </div>
                 <div class="profile-des">
@@ -227,18 +228,18 @@
                         <input type="text" name="posting" placeholder="내용을 입력해주세요" style="height: 150px; width:500px; border-radius: 5px; border: none;" />
                     </div>
                     <div class="write-bottom">
-                        <button type="submit" class="btn btn-info disabled btn-sm">글쓰기</button>
+                        <button type="submit" name="posting" class="btn btn-info disabled btn-sm">글쓰기</button>
                     </div>
                 </div>
                 <div class="club-post">
                     <div class="post">
                         <div class="profile-photo">
-                            <span><img src="assets/img/a.jpg" width="50px" height="50px" style="border-radius: 20px;"></span>
+                            <span><img src="resources/img/a.jpg" width="50px" height="50px" style="border-radius: 20px;"></span>
                             <p>고심일등사랑</p>
                         </div>
                         <div class="post-right">
                             <p style="font-size: 12px;">2021년 10월 07일 21시22분</p>
-                            <span><img src="assets/img/c-ramen.jpg" width="400px" height="300px"></span>
+                            <span><img src="resources/img/c-ramen.jpg" width="400px" height="300px"></span>
                         </div>
                     </div>
                     <div class="journal">
@@ -250,7 +251,7 @@
                     </div>
                     <div class="comment">
                         <div class="c-profile">
-                            <span><img src="assets/img/b.jpg" width="40px" height="40px"></span>
+                            <span><img src="resources/img/b.jpg" width="40px" height="40px"></span>
                             <p style="font-size: 15px;">고심이등사랑</p>
                         </div>
                         <div class="c-comment">
@@ -263,7 +264,7 @@
             <hr />
         <div class="footer">
             <div class="logo">
-                <img src="assets/img/logo.png" width="150px;" height="150px;">
+                <img src="resources/img/logo.png" width="150px;" height="150px;">
             </div>
             <div class="f-menu">
                 <br />

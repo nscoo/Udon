@@ -83,43 +83,49 @@
 
     .main {
         display: grid;
-        grid-template-columns: auto-fit;
-
-        padding: 100px 0;
+        padding: 100px 25px;
     }
 
-    .m-top {
+    .title {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        padding: 10px;
+    }
+
+    .post {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        margin: 10px;
+        background-color: #f0f0f0;
+        padding-top: 20px;
+    }
+
+
+    .photo {
+        display: grid;
         place-self: start center;
-        width: 100%;
-        margin-bottom: 10px;
     }
 
-    .top-left {
+    .photo>span {
+        text-align: center;
+    }
+
+    .name {
+        font-size: 18px;
+        vertical-align: middle;
+
+    }
+
+    .content {
         display: grid;
-        place-self: start;
-
+        place-self: start center;
+        grid-template-rows: repeat(2, 1fr);
+        text-align: center;
     }
 
-    .top-right {
+    .LnC {
         display: grid;
         place-self: start end;
-    }
-
-    .top-right>a:hover {
-        color: purple;
-    }
-
-    .m-blocks {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-    }
-
-    .club {
-        flex-grow: 1 1 1;
-        padding: 25px;
+        grid-template-columns: repeat(2, 1fr);
 
     }
     </style>
@@ -142,57 +148,96 @@
             </div>
         </div>
         <div class="main">
-            <div class="m-top">
-                <div class="top-left" style="font-size: 25px; font-weight: bold;">My클럽리스트</div>
-                <div class="top-right"><a href="#">⚙목록편집</a></div>
+            <div class="title">
+                <h3>모집 글 리스트[Sports]</h3>
             </div>
-            <div class="m-blocks">
-                <div class="club">
-                    <a href="${pageContext.request.contextPath}/club_detail.do">
-                        <img src="resources/img/a.jpg" width="250px" height="250px" />
-                        <p style="text-align: center; font-size: 20px; font-weight: bold; padding-top: 10px;">소형견 사회화 모임</p>
+            <div class="post">
+                <div class="photo"><span><img src="resources/img/b.jpg" width="40px" height="40px" style="border-radius: 30px;"></span>
+                    <p class="name">노상처리기사</p>
+                </div>
+                <div class="content">
+                    <a href="#">
+                        <p style="font-size: 20px">
+                            <b>[<span style="font-weight: bold; color: red">풋살</span>]&nbsp;주말 아침마다 풋살 하실 분 구합니다!&nbsp;(10명/16명)</b>
+                        </p>
+                    </a>
+                    <a href="#">
+                        <p>강동풋살모임</p>
                     </a>
                 </div>
-                <div class="club">
-                    <a href="${pageContext.request.contextPath}/club_detail.do">
-                        <img src="resources/img/b.jpg" width="250px" height="250px" />
-                        <p style="text-align: center; font-size: 20px; font-weight: bold; padding-top: 10px;">고심이 등반 클럽</p>
+                <div class="LnC">
+                    <a href="#">
+                        <p>좋아요(21)&nbsp;</p>
+                    </a>
+                    <a href="#">
+                        <p>댓글(5)</p>
                     </a>
                 </div>
-                <div class="club">
-                    <a href="${pageContext.request.contextPath}/club_detail.do">
-                        <img src="resources/img/c.jpg" width="250px" height="250px" />
-                        <p style="text-align: center; font-size: 20px; font-weight: bold; padding-top: 10px;">와인의 모든것</p>
+            </div>
+            <div class="post">
+                <div class="photo"><span><img src="resources/img/d.jpg" width="40px" height="40px" style="border-radius: 30px;"></span>
+                    <p class="name">이수진</p>
+                </div>
+                <div class="content">
+                    <a href="#">
+                        <p style="font-size: 20px">[<span style="font-weight: bold; color: green">등산</span>]&nbsp;<b>한 달에 한 번 큰 산을 오릅니다~&nbsp;(2명/6명)</b></p>
+                    </a>
+                    <a href="#">
+                        <p>Climber_Seoul</p>
                     </a>
                 </div>
-                <div class="club">
-                    <a href="${pageContext.request.contextPath}/club_detail.do">
-                        <img src="resources/img/d.jpg" width="250px" height="250px" />
-                        <p style="text-align: center; font-size: 20px; font-weight: bold; padding-top: 10px;">정처기 한 달 처리팀</p>
+                <div class="LnC">
+                    <a href="#">
+                        <p>좋아요(11)&nbsp;</p>
+                    </a>
+                    <a href="#">
+                        <p>댓글(7)</p>
                     </a>
                 </div>
-                <div class="club">
-                    <a href="${pageContext.request.contextPath}/club_detail.do">
-                        <img src="resources/img/e.jpg" width="250px" height="250px" />
-                        <p style="text-align: center; font-size: 20px; font-weight: bold; padding-top: 10px;">아랍어를 사랑하는 모임</p>
+            </div>
+            <div class="post">
+                <div class="photo"><span><img src="resources/img/e.jpg" width="40px" height="40px" style="border-radius: 30px;"></span>
+                    <p class="name">최고심</p>
+                </div>
+                <div class="content">
+                    <a href="#">
+                        <p style="font-size: 20px">[<span style="font-weight: bold; color: purple;">테니스</span>]&nbsp;<b>테니스를 사랑하는 사람들이 모여있어요!&nbsp;(10명/18명)</b></p>
+                    </a>
+                    <a href="#">
+                        <p>테사모</p>
                     </a>
                 </div>
-                <div class="club">
-                    <a href="${pageContext.request.contextPath}/club_detail.do">
-                        <img src="resources/img/f.jpg" width="250px" height="250px" />
-                        <p style="text-align: center; font-size: 20px; font-weight: bold; padding-top: 10px;">전국일등 조기축구</p>
+                <div class="LnC">
+                    <a href="#">
+                        <p>좋아요(23)&nbsp;</p>
+                    </a>
+                    <a href="#">
+                        <p>댓글(3)</p>
                     </a>
                 </div>
-                <div class="club">
-                    <a href="${pageContext.request.contextPath}/create_club1.do">
-                        <img src="resources/img/plus.png" width="200px" height="200px" />
-                        <br /><br /><br />
-                        <p style="text-align: center; font-size: 20px; font-weight: bold; padding-top: 10px;">new 클럽만들기</p>
+            </div>
+            <div class="post">
+                <div class="photo"><span><img src="resources/img/f.jpg" width="40px" height="40px" style="border-radius: 30px;"></span>
+                    <p class="name">Chori</p>
+                </div>
+                <div class="content">
+                    <a href="#">
+                        <p style="font-size: 20px">[<span style="font-weight: bold; color: orange;">야구</span>]&nbsp;<b>전국 아마추어대회 우승 목표팀 이웃사촌입니다!&nbsp;(5명/10명)</b></p>
+                    </a>
+                    <a href="#">
+                        <p>이웃사촌</p>
+                    </a>
+                </div>
+                <div class="LnC">
+                    <a href="#">
+                        <p>좋아요(11)&nbsp;</p>
+                    </a>
+                    <a href="#">
+                        <p>댓글(17)</p>
                     </a>
                 </div>
             </div>
         </div>
-        <hr />
         <div class="footer">
             <div class="logo">
                 <img src="resources/img/logo.png" width="150px;" height="150px;">
