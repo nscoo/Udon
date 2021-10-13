@@ -47,7 +47,12 @@ public class HomeController {
 		
 		return "create_club2";
 	}
-	
+	@RequestMapping(value = "/club_recruit.do", method = RequestMethod.GET)
+	public String club_recruit() {
+		
+		
+		return "club_recruit";
+	}
 	
 
 

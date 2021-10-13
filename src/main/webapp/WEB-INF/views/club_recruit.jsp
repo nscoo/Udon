@@ -84,31 +84,43 @@
     .main {
         display: grid;
         grid-template-columns: auto-fit;
-
         padding: 100px 0;
     }
 
     .m-top {
         display: grid;
+        place-self: start center;
+        padding-bottom: 50px;
+    }
 
+    .m-board {
+        display: grid;
         place-self: start center;
         width: 100%;
-        margin-bottom: 10px;
+        background-color: #f0f0f0;
+        padding: 20px 40px 20px 80px;
     }
 
-    .top-left {
+    .board {
         display: grid;
-        place-self: start;
-
+        grid-template-columns: 6fr 1fr 1fr;
+        margin-bottom: -12px;
     }
 
-    .top-right {
+    .title {
+        display: grid;
+        text-align: center;
+    }
+
+
+    .like {
         display: grid;
         place-self: start end;
     }
 
-    .top-right>a:hover {
-        color: purple;
+    .comment {
+        display: grid;
+        place-self: start;
     }
 
     .m-blocks {
@@ -138,17 +150,60 @@
             </div>
             <div class="h-login">
                 <span><a href="#">Login</a></span>
-                <span><a href="${pageContext.request.contextPath}/mypage.do">내정보</a></span>
+                <span><a href="#">내정보</a></span>
             </div>
         </div>
         <div class="main">
             <div class="m-top">
-                <div class="top-left" style="font-size: 28px; font-weight: bold;">
-                    만들고 싶은 클럽의 대분류를 선택해주세요!</div>
+                <div class="title">
+                    <h4>오늘의 베스트 인기 모집글</h4>
+                </div>
+                <div class="m-board">
+                    <li class="board"><a href="#">1. 제목입니다</a>
+                        <p class="like">좋아요(20)</p>
+                        <p class="comment">댓글(12)</p>
+                    </li>
+                    <li class="board"><a href="#">2. 제목입니다</a>
+                        <p class="like">좋아요(20)</p>
+                        <p class="comment">댓글(12)</p>
+                    </li>
+                    <li class="board"><a href="#">3. 제목입니다</a>
+                        <p class="like">좋아요(20)</p>
+                        <p class="comment">댓글(12)</p>
+                    </li>
+                    <li class="board"><a href="#">4. 제목입니다</a>
+                        <p class="like">좋아요(20)</p>
+                        <p class="comment">댓글(12)</p>
+                    </li>
+                    <li class="board"><a href="#">5. 제목입니다</a>
+                        <p class="like">좋아요(20)</p>
+                        <p class="comment">댓글(12)</p>
+                    </li>
+                    <li class="board"><a href="#">6. 제목입니다</a>
+                        <p class="like">좋아요(20)</p>
+                        <p class="comment">댓글(12)</p>
+                    </li>
+                    <li class="board"><a href="#">7. 제목입니다</a>
+                        <p class="like">좋아요(20)</p>
+                        <p class="comment">댓글(12)</p>
+                    </li>
+                    <li class="board"><a href="#">8. 제목입니다</a>
+                        <p class="like">좋아요(20)</p>
+                        <p class="comment">댓글(12)</p>
+                    </li>
+                    <li class="board"><a href="#">9. 제목입니다</a>
+                        <p class="like">좋아요(20)</p>
+                        <p class="comment">댓글(12)</p>
+                    </li>
+                    <li class="board"><a href="#">10. 제목입니다</a>
+                        <p class="like">좋아요(20)</p>
+                        <p class="comment">댓글(12)</p>
+                    </li>
+                </div>
             </div>
             <div class="m-blocks">
                 <div class="club">
-                    <a href="${pageContext.request.contextPath}/create_club2.do">
+                    <a href="#">
                         <img src="assets/img/sports.png" width="200px" height="200px" style="border-radius: 40px; background-color: mediumpurple; padding: 20px;" />
                         <p style="text-align: center; font-size: 20px; font-weight: bold; padding-top: 10px;">SPORTS</p>
                     </a>
