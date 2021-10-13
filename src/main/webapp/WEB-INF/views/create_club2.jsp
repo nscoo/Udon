@@ -184,6 +184,7 @@
                 <div class="club-name">
                     <p style="font-size: 20px;"><b>클럽 소개글</b></p>
                     <input type="text" name="clubdes" placeholder="이곳에 클럽 소개글을 작성해주세요!">
+                    <button type="button" class="btn btn-sm btn-success">저장</button>
                 </div>
             </div>
         </div>
