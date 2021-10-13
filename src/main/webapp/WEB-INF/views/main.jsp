@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no, target-density=medium-dpi">
     <title>Udon</title>
-    <link rel="icon" href="assets/img/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" href="resources/img/favicon-16x16.png" sizes="16x16">
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -39,6 +39,11 @@
     a {
         text-decoration: none;
         color: black;
+    }
+    
+    a:hover{
+    	font-weight: bold;
+    	color: purple;
     }
 
     button {
@@ -194,7 +199,7 @@
             <div class="main-l">
                 <div class="m-search" style="border: 5px solid purple; border-radius: 25px; width: 380px; height: 50px; padding-left: 10px;">
                     <form action="main.do" method="get">
-                        <button type="submit"><img src="assets/img/mag.png" width="20px" height="20px"></button><input class="m-input" type="text" name="search" placeholder="관심있는 정보를 검색해보세요!" />
+                        <button type="submit"><img src="resources/img/mag.png" width="20px" height="20px"></button><input class="m-input" type="text" name="search" placeholder="관심있는 정보를 검색해보세요!" />
                     </form>
                 </div>
                 <div class="m-covid">
@@ -222,7 +227,7 @@
                     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img style="display: inline-block;" src="${pageContext.request.contextPath}/assets/img/c-galbi.jpg" width="350px" height="250px">
+                                <img style="display: inline-block;" src="${pageContext.request.contextPath}/resources/img/c-galbi.jpg" width="350px" height="250px">
                                 <span style="display: inline-block; vertical-align: middle;">
                                     <h4><b>우리동네 갈비 맛집은?</b></h4>
                                     <br /><br /><br />
@@ -232,7 +237,7 @@
                                 </span>
                             </div>
                             <div class="carousel-item">
-                                <img src="${pageContext.request.contextPath}/assets/img/c-ramen.jpg" width="350px" height="250px">
+                                <img src="${pageContext.request.contextPath}/resources/img/c-ramen.jpg" width="350px" height="250px">
                                 <span style="display: inline-block; vertical-align: middle;">
                                     <h4><b>우리동네 라멘 맛집은?</b></h4>
                                     <br /><br /><br />
@@ -242,7 +247,7 @@
                                 </span>
                             </div>
                             <div class="carousel-item">
-                                <img src="${pageContext.request.contextPath}assets/img/c-guk.jpg" width="350px" height="250px">
+                                <img src="${pageContext.request.contextPath}/resources/img/c-guk.jpg" width="350px" height="250px">
                                 <span style="display: inline-block; vertical-align: middle;">
                                     <h4><b>우리동네 국밥 맛집은?</b></h4>
                                     <br /><br /><br />
@@ -385,7 +390,7 @@
         <hr />
         <div class="footer">
             <div class="logo">
-                <img src="${pageContext.request.contextPath}/assets/img/logo.png" width="150px;" height="150px;">
+                <img src="${pageContext.request.contextPath}/resources/img/logo.png" width="150px;" height="150px;">
             </div>
             <div class="f-menu">
                 <br />

@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no, target-density=medium-dpi">
     <title>Udon</title>
-    <link rel="icon" href="assets/img/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" href="resources/img/favicon-16x16.png" sizes="16x16">
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -142,23 +142,23 @@
     <div class="container">
         <div class="header">
             <div class="h-logo">
-                <a href="main.do" style="font-size: 40px;"><b>Udon</b></a>
+                <a href="${pageContext.request.contextPath}" style="font-size: 40px;"><b>Udon</b></a>
             </div>
             <div class="h-menu">
-                <span><a href="myclub.do" style="font-size: 20px;">my우동클</a></span>
+                <span><a href="${pageContext.request.contextPath}/myclub.do" style="font-size: 20px;">my우동클</a></span>
                 <span><a href="${pageContext.request.contextPath}/club_recruit.do" style="font-size: 20px;">우동클모집</a></span>
                 <span><a href="#" style="font-size: 20px;">우동커뮤니티</a></span>
             </div>
             <div class="h-login">
-                <span><a href="#">Login</a></span>
-                <span><a href="#">내정보</a></span>
+                <span><a href="${pageContext.request.contextPath}/login.do">Login</a></span>
+                <span><a href="${pageContext.request.contextPath}/mypage.do">내정보</a></span>
             </div>
         </div>
         <div class="main">
             <div class="m-top">
                 <div class="top-left">
                     <span>
-                        <img src="assets/img/a.jpg" width="250px" height="250px">
+                        <img src="resources/img/a.jpg" width="250px" height="250px">
                     </span>
                     <a href="#">
                         <p style="text-align: right; font-weight: bold;">사진추가</p>
@@ -190,7 +190,7 @@
         <hr />
         <div class="footer">
             <div class="logo">
-                <img src="assets/img/logo.png" width="150px;" height="150px;">
+                <img src="resources/img/logo.png" width="150px;" height="150px;">
             </div>
             <div class="f-menu">
                 <br />
