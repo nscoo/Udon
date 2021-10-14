@@ -60,6 +60,13 @@ public class HomeController {
 		
 		return "recruit_board";
 	}
+	
+	@RequestMapping(value = "/recruit_detail.do", method = RequestMethod.GET)
+	public String recruit_detail() {
+		
+		
+		return "recruit_detail";
+	}
 
 	@RequestMapping(value = "/login.do", method = RequestMethod.GET)
 	public String login() {

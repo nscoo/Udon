@@ -156,7 +156,7 @@
                     <p class="name">노상처리기사</p>
                 </div>
                 <div class="content">
-                    <a href="#">
+                    <a href="${pageContext.request.contextPath}/recruit_detail.do">
                         <p style="font-size: 20px">
                             <b>[<span style="font-weight: bold; color: red">풋살</span>]&nbsp;주말 아침마다 풋살 하실 분 구합니다!&nbsp;(10명/16명)</b>
                         </p>
@@ -169,7 +169,7 @@
                     <a href="#">
                         <p>좋아요(21)&nbsp;</p>
                     </a>
-                    <a href="#">
+                    <a href="${pageContext.request.contextPath}/recruit_detail.do">
                         <p>댓글(5)</p>
                     </a>
                 </div>
@@ -179,7 +179,7 @@
                     <p class="name">이수진</p>
                 </div>
                 <div class="content">
-                    <a href="#">
+                    <a href="${pageContext.request.contextPath}/recruit_detail.do">
                         <p style="font-size: 20px">[<span style="font-weight: bold; color: green">등산</span>]&nbsp;<b>한 달에 한 번 큰 산을 오릅니다~&nbsp;(2명/6명)</b></p>
                     </a>
                     <a href="#">
@@ -190,7 +190,7 @@
                     <a href="#">
                         <p>좋아요(11)&nbsp;</p>
                     </a>
-                    <a href="#">
+                    <a href="${pageContext.request.contextPath}/recruit_detail.do">
                         <p>댓글(7)</p>
                     </a>
                 </div>
@@ -200,7 +200,7 @@
                     <p class="name">최고심</p>
                 </div>
                 <div class="content">
-                    <a href="#">
+                    <a href="${pageContext.request.contextPath}/recruit_detail.do">
                         <p style="font-size: 20px">[<span style="font-weight: bold; color: purple;">테니스</span>]&nbsp;<b>테니스를 사랑하는 사람들이 모여있어요!&nbsp;(10명/18명)</b></p>
                     </a>
                     <a href="#">
@@ -211,7 +211,7 @@
                     <a href="#">
                         <p>좋아요(23)&nbsp;</p>
                     </a>
-                    <a href="#">
+                    <a href="${pageContext.request.contextPath}/recruit_detail.do">
                         <p>댓글(3)</p>
                     </a>
                 </div>
@@ -221,7 +221,7 @@
                     <p class="name">Chori</p>
                 </div>
                 <div class="content">
-                    <a href="#">
+                    <a href="${pageContext.request.contextPath}/recruit_detail.do">
                         <p style="font-size: 20px">[<span style="font-weight: bold; color: orange;">야구</span>]&nbsp;<b>전국 아마추어대회 우승 목표팀 이웃사촌입니다!&nbsp;(5명/10명)</b></p>
                     </a>
                     <a href="#">
@@ -232,7 +232,7 @@
                     <a href="#">
                         <p>좋아요(11)&nbsp;</p>
                     </a>
-                    <a href="#">
+                    <a href="${pageContext.request.contextPath}/recruit_detail.do">
                         <p>댓글(17)</p>
                     </a>
                 </div>
