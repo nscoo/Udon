@@ -103,4 +103,13 @@ public class HomeController {
 		
 		return "detail_board";
 	}
+
+	//커뮤니티 상세
+
+	@RequestMapping(value = "/community.do", method = RequestMethod.GET)
+	public String community() {
+		
+		
+		return "community";
+	}
 }
