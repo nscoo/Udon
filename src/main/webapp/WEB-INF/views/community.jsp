@@ -2,7 +2,6 @@
 	pageEncoding="UTF-8"%>
 <%@ page trimDirectiveWhitespaces="true"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
 <!DOCTYPE html>
 <html>
 
@@ -88,17 +87,39 @@
     .main {
         display: grid;
         place-self: start center;
-        padding: 50px 100px;
+        padding: 50px 4s00px;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .card {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+    }
 
+    .content {
+        height: 150px;
     }
 
     .board {
         border: 1px solid #e3e3e3;
+        height: 250px;
+    }
+
+    .board_menu {
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        padding-top: 50px;
+    }
+
+    .board_top>h3>a {
+        float: left;
+    }
+
+    .view {
+        text-align: right;
+    }
+
+    .good {
+        float: left;
 
     }
     </style>
@@ -129,48 +150,127 @@
             <span><a href="#" style="font-size: 20px;">부동산</a></span>
             <span><a href="#" style="font-size: 20px;">육아</a></span>
             <span><a href="#" style="font-size: 20px;">연애 상담</a></span>
+            <span><select name="job">
+                    <option value="">정렬 방식</option>
+                    <option value="order_recent">최근순</option>
+                    <option value="order_comments">댓글순</option>
+                    <option value="order_goods">좋아요순</option>
+                    <option value="order_views">조회순</option>
+                </select></span>
         </div>
         <hr>
-    </div>
-    <div class="main">
-        <div class="card">
-            <div class="board">
-                <h3><a href="#">전체 베스트</a></h3>
-                <a href="#">어서 댓글 달아주세여~</a>
+        <div class="main">
+            <div class="card">
+                <div class="board">
+                    <div class="board_top">
+                        <h3><a href="#">전체 베스트</a></h3>
+                        <p class="view">view</p>
+                    </div>
+                    <div class="content">
+                        <a href="#">어서 댓글 달아주세여~</a>
+                    </div>
+                    <div class="comment">
+                        <p class="good">좋아요&nbsp</p>
+                        <p>댓글</p>
+                    </div>
+                </div>
+                <div class="board">
+                    <div class="board_top">
+                        <h3><a href="#">전체 베스트</a></h3>
+                        <p class="view">view</p>
+                    </div>
+                    <div class="content">
+                        <a href="#">어서 댓글 달아주세여~</a>
+                    </div>
+                    <div class="comment">
+                        <p class="good">좋아요&nbsp</p>
+                        <p>댓글</p>
+                    </div>
+                </div>
             </div>
-            <div class="board">
-                <h3><a href="#">자유게시판</a></h3>
-                <a href="#">어서 댓글 달아주세여~</a>
+            <div class="card">
+                <div class="board">
+                    <div class="board_top">
+                        <h3><a href="#">전체 베스트</a></h3>
+                        <p class="view">view</p>
+                    </div>
+                    <div class="content">
+                        <a href="#">어서 댓글 달아주세여~</a>
+                    </div>
+                    <div class="comment">
+                        <p class="good">좋아요 &nbsp</p>
+                        <p>댓글</p>
+                    </div>
+                </div>
+                <div class="board">
+                    <div class="board_top">
+                        <h3><a href="#">전체 베스트</a></h3>
+                        <p class="view">view</p>
+                    </div>
+                    <div class="content">
+                        <a href="#">어서 댓글 달아주세여~</a>
+                    </div>
+                    <div class="comment">
+                        <p class="good">좋아요&nbsp</p>
+                        <p>댓글</p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <div class="board">
-                <h3><a href="#">전체 베스트</a></h3>
-                <a href="#">어서 댓글 달아주세여~</a>
+            <div class="card">
+                <div class="board">
+                    <div class="board_top">
+                        <h3><a href="#">전체 베스트</a></h3>
+                        <p class="view">view</p>
+                    </div>
+                    <div class="content">
+                        <a href="#">어서 댓글 달아주세여~</a>
+                    </div>
+                    <div class="comment">
+                        <p class="good">좋아요&nbsp</p>
+                        <p>댓글</p>
+                    </div>
+                </div>
+                <div class="board">
+                    <div class="board_top">
+                        <h3><a href="#">전체 베스트</a></h3>
+                        <p class="view">view</p>
+                    </div>
+                    <div class="content">
+                        <a href="#">어서 댓글 달아주세여~</a>
+                    </div>
+                    <div class="comment">
+                        <p class="good">좋아요&nbsp</p>
+                        <p>댓글</p>
+                    </div>
+                </div>
             </div>
-            <div class="board">
-                <h3><a href="#">자유게시판</a></h3>
-                <a href="#">어서 댓글 달아주세여~</a>
-            </div>
-        </div>
-        <div class="card">
-            <div class="board">
-                <h3><a href="#">전체 베스트</a></h3>
-                <a href="#">어서 댓글 달아주세여~</a>
-            </div>
-            <div class="board">
-                <h3><a href="#">자유게시판</a></h3>
-                <a href="#">어서 댓글 달아주세여~</a>
-            </div>
-        </div>
-        <div class="card">
-            <div class="board">
-                <h3><a href="#">전체 베스트</a></h3>
-                <a href="#">어서 댓글 달아주세여~</a>
-            </div>
-            <div class="board">
-                <h3><a href="#">자유게시판</a></h3>
-                <a href="#">어서 댓글 달아주세여~</a>
+            <div class="card">
+                <div class="board">
+                    <div class="board_top">
+                        <h3><a href="#">전체 베스트</a></h3>
+                        <p class="view">view</p>
+                    </div>
+                    <div class=" content">
+                        <a href="#">어서 댓글 달아주세여~</a>
+                    </div>
+                    <div class="comment">
+                        <p class="good">좋아요&nbsp</p>
+                        <p>댓글</p>
+                    </div>
+                </div>
+                <div class="board">
+                    <div class="board_top">
+                        <h3><a href="#">전체 베스트</a></h3>
+                        <p class="view">view</p>
+                    </div>
+                    <div class="content">
+                        <a href="#">어서 댓글 달아주세여~</a>
+                    </div>
+                    <div class="comment">
+                        <p class="good">좋아요&nbsp</p>
+                        <p>댓글</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
