@@ -144,7 +144,7 @@
         <div class="main">
             <div class="m-top">
                 <div class="top-left" style="font-size: 25px; font-weight: bold;">My클럽리스트</div>
-                <div class="top-right"><a href="#">⚙목록편집</a></div>
+                <div class="top-right"><a href="${pageContext.request.contextPath}/apply_members.do">⚙신청멤버관리</a></div>
             </div>
             <div class="m-blocks">
                 <div class="club">
@@ -207,5 +207,6 @@
         </div>
     </div>
 </body>
+
 
 </html>

@@ -67,6 +67,13 @@ public class HomeController {
 		
 		return "recruit_detail";
 	}
+	
+	@RequestMapping(value = "/apply_members.do", method = RequestMethod.GET)
+	public String apply_members() {
+		
+		
+		return "apply_members";
+	}
 
 	@RequestMapping(value = "/login.do", method = RequestMethod.GET)
 	public String login() {
