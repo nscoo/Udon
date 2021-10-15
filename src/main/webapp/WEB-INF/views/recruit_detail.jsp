@@ -101,6 +101,15 @@
         display: grid;
 
     }
+    .club-title {
+        display: grid;
+        grid-template-columns: 2fr 1fr
+    }
+
+    .club-title>button {
+        display: grid;
+        place-self: start end;
+    }
 
     .p-content {
         display: grid;
@@ -147,17 +156,39 @@
             <div class="post">
                 <div class="p-top">
                     <div class="photo">
-                        <span><img src="resources/img/c.jpg" width="250px" height="250px"></span>
+                        <span><img src="resources/img/a.jpg" width="250px" height="250px"></span>
                     </div>
                     <div class="detail">
-                        <h3>고심이 등반 클럽</h3>
+                        <div class="club-title">
+                            <h3>고심이 등반 클럽</h3>
+                            <button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                가입신청하기
+                            </button>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">가입 신청하기</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <label for="id">신청메세지</label>
+                                        <input type="text" name="id" placeholder="각오나 특이사항을 마스터에게 알려주세요!" style="border: none; width: 90%; background-color: #f0f0f0; padding: 10px; ">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+                                        <button type="button" class="btn btn-primary">신청하기</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <hr style="width: 80%;" />
                         <p>현재인원 5명(여4명,&nbsp;남1명)</p>
                         <p>모집인원 10명(여1명,&nbsp;남4명)</p>
                         <br />
-                        <a href="www.udon-club.co.kr/gosim_climb">
-                            <p>클럽페이지로 이동하기</p>
-                        </a>
+                        <p><a href="www.udon-club.co.kr/gosim_climb">클럽페이지로 이동하기</a></p>
                     </div>
                 </div>
                 <div class="p-content">
@@ -175,7 +206,7 @@
                 </div>
                 <div class="p-comments">
                     <div class="c-photo">
-                        <span><img src="resources/img/c.jpg" width="60px" height="60px"></span>
+                        <span><img src="resources/img/a.jpg" width="60px" height="60px"></span>
                     </div>
                     <div class="c-comment">
                         <p><b>주인장</b></p>
@@ -193,7 +224,7 @@
                 </div>
                 <div class="p-comments">
                     <div class="c-photo">
-                        <span><img src="resources/img/c.jpg" width="60px" height="60px"></span>
+                        <span><img src="resources/img/a.jpg" width="60px" height="60px"></span>
                     </div>
                     <div class="c-comment">
                         <p><b>주인장</b></p>
