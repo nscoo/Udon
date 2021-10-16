@@ -84,43 +84,50 @@
 
     }
 
-    .main {
-        display: grid;
-        place-self: start center;
-        padding: 50px 4s00px;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .card {
-        display: grid;
-    }
-
-    .content {
-        height: 150px;
-    }
-
-    .board {
-        border: 1px solid #e3e3e3;
-        height: 250px;
-    }
-
     .board_menu {
         display: grid;
         grid-template-columns: repeat(9, 1fr);
         padding-top: 50px;
     }
 
-    .board_top>h3>a {
+    .best_group {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .title {
         float: left;
     }
 
-    .view {
+    .more {
         text-align: right;
     }
 
-    .good {
-        float: left;
+    .best_rank {
+        background-color: lightgrey;
+        padding: 10px;
+    }
 
+    .best_card {
+        padding: 20px;
+    }
+
+    .best_title {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .best_rank>span {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+
+    }
+
+    .best_rank>span>span {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
+        place-self: start end;
     }
     </style>
 </head>
@@ -134,7 +141,7 @@
             <div class="h-menu">
                 <span><a href="${pageContext.request.contextPath}/myclub.do" style="font-size: 20px;">my우동클</a></span>
                 <span><a href="${pageContext.request.contextPath}/club_recruit.do" style="font-size: 20px;">우동클모집</a></span>
-                <span><a href="#" style="font-size: 20px;">우동커뮤니티</a></span>
+                <span><a href="${pageContext.request.contextPath}/community.do" style="font-size: 20px;">우동커뮤니티</a></span>
             </div>
             <div class="h-login">
                 <span><a href="${pageContext.request.contextPath}/login">Login</a></span>
@@ -150,129 +157,132 @@
             <span><a href="#" style="font-size: 20px;">부동산</a></span>
             <span><a href="#" style="font-size: 20px;">육아</a></span>
             <span><a href="#" style="font-size: 20px;">연애 상담</a></span>
-            <span><select name="job">
-                    <option value="">정렬 방식</option>
-                    <option value="order_recent">최근순</option>
-                    <option value="order_comments">댓글순</option>
-                    <option value="order_goods">좋아요순</option>
-                    <option value="order_views">조회순</option>
-                </select></span>
+            
         </div>
         <hr>
-        <div class="main">
-            <div class="card">
-                <div class="board">
-                    <div class="board_top">
-                        <h3><a href="#">전체 베스트</a></h3>
-                        <p class="view">view</p>
-                    </div>
-                    <div class="content">
-                        <a href="#">어서 댓글 달아주세여~</a>
-                    </div>
-                    <div class="comment">
-                        <p class="good">좋아요&nbsp</p>
-                        <p>댓글</p>
-                    </div>
+        <div class="best_group">
+            <div class="best_card">
+                <div class="best_title">
+                    <h3 class="title">전체 베스트</h3>
+                    <p class="more"> 더보기 ></p>
                 </div>
-                <div class="board">
-                    <div class="board_top">
-                        <h3><a href="#">전체 베스트</a></h3>
-                        <p class="view">view</p>
-                    </div>
-                    <div class="content">
-                        <a href="#">어서 댓글 달아주세여~</a>
-                    </div>
-                    <div class="comment">
-                        <p class="good">좋아요&nbsp</p>
-                        <p>댓글</p>
-                    </div>
+                <div class="best_rank">
+                    <span>
+                        <p>1.뚜틴이의 개발이야기</p><span><a href="#">좋아요(10)</a><a href="#">댓글(3)</a></span>
+                    </span>
+                    <span>
+                        <p>2.뚜틴이의 정처기 도전기</p><span><a href="#">좋아요(10)</a><a href="#">댓글(3)</a></span>
+                    </span>
+                    <span>
+                        <p>3.뚜틴이의 1인1치킨 도전기</p><span><a href="#">좋아요(10)</a><a href="#">댓글(3)</a></span>
+                    </span>
+                    <span>
+                        <p>4.뚜틴이의 뚜루뚜루</p><span><a href="#">좋아요(10)</a><a href="#">댓글(3)</a></span>
+                    </span>
                 </div>
             </div>
-            <div class="card">
-                <div class="board">
-                    <div class="board_top">
-                        <h3><a href="#">전체 베스트</a></h3>
-                        <p class="view">view</p>
-                    </div>
-                    <div class="content">
-                        <a href="#">어서 댓글 달아주세여~</a>
-                    </div>
-                    <div class="comment">
-                        <p class="good">좋아요 &nbsp</p>
-                        <p>댓글</p>
-                    </div>
+            <div class="best_card">
+                <div class="best_title">
+                    <h3 class="title">전체 베스트</h3>
+                    <p class="more"> 더보기 ></p>
                 </div>
-                <div class="board">
-                    <div class="board_top">
-                        <h3><a href="#">전체 베스트</a></h3>
-                        <p class="view">view</p>
-                    </div>
-                    <div class="content">
-                        <a href="#">어서 댓글 달아주세여~</a>
-                    </div>
-                    <div class="comment">
-                        <p class="good">좋아요&nbsp</p>
-                        <p>댓글</p>
-                    </div>
+                <div class="best_rank">
+                    <span>
+                        <p>1.뚜틴이의 개발이야기</p><span><a href="#">좋아요(10)</a><a href="#">댓글(3)</a></span>
+                    </span>
+                    <span>
+                        <p>2.뚜틴이의 정처기 도전기</p><span><a href="#">좋아요(10)</a><a href="#">댓글(3)</a></span>
+                    </span>
+                    <span>
+                        <p>3.뚜틴이의 1인1치킨 도전기</p><span><a href="#">좋아요(10)</a><a href="#">댓글(3)</a></span>
+                    </span>
+                    <span>
+                        <p>4.뚜틴이의 뚜루뚜루</p><span><a href="#">좋아요(10)</a><a href="#">댓글(3)</a></span>
+                    </span>
                 </div>
             </div>
-            <div class="card">
-                <div class="board">
-                    <div class="board_top">
-                        <h3><a href="#">전체 베스트</a></h3>
-                        <p class="view">view</p>
-                    </div>
-                    <div class="content">
-                        <a href="#">어서 댓글 달아주세여~</a>
-                    </div>
-                    <div class="comment">
-                        <p class="good">좋아요&nbsp</p>
-                        <p>댓글</p>
-                    </div>
+            <div class="best_card">
+                <div class="best_title">
+                    <h3 class="title">전체 베스트</h3>
+                    <p class="more"> 더보기 ></p>
                 </div>
-                <div class="board">
-                    <div class="board_top">
-                        <h3><a href="#">전체 베스트</a></h3>
-                        <p class="view">view</p>
-                    </div>
-                    <div class="content">
-                        <a href="#">어서 댓글 달아주세여~</a>
-                    </div>
-                    <div class="comment">
-                        <p class="good">좋아요&nbsp</p>
-                        <p>댓글</p>
-                    </div>
+                <div class="best_rank">
+                    <span>
+                        <p>1.뚜틴이의 개발이야기</p><span><a href="#">좋아요(10)</a><a href="#">댓글(3)</a></span>
+                    </span>
+                    <span>
+                        <p>2.뚜틴이의 정처기 도전기</p><span><a href="#">좋아요(10)</a><a href="#">댓글(3)</a></span>
+                    </span>
+                    <span>
+                        <p>3.뚜틴이의 1인1치킨 도전기</p><span><a href="#">좋아요(10)</a><a href="#">댓글(3)</a></span>
+                    </span>
+                    <span>
+                        <p>4.뚜틴이의 뚜루뚜루</p><span><a href="#">좋아요(10)</a><a href="#">댓글(3)</a></span>
+                    </span>
                 </div>
             </div>
-            <div class="card">
-                <div class="board">
-                    <div class="board_top">
-                        <h3><a href="#">전체 베스트</a></h3>
-                        <p class="view">view</p>
-                    </div>
-                    <div class=" content">
-                        <a href="#">어서 댓글 달아주세여~</a>
-                    </div>
-                    <div class="comment">
-                        <p class="good">좋아요&nbsp</p>
-                        <p>댓글</p>
-                    </div>
+            <div class="best_card">
+                <div class="best_title">
+                    <h3 class="title">전체 베스트</h3>
+                    <p class="more"> 더보기 ></p>
                 </div>
-                <div class="board">
-                    <div class="board_top">
-                        <h3><a href="#">전체 베스트</a></h3>
-                        <p class="view">view</p>
-                    </div>
-                    <div class="content">
-                        <a href="#">어서 댓글 달아주세여~</a>
-                    </div>
-                    <div class="comment">
-                        <p class="good">좋아요&nbsp</p>
-                        <p>댓글</p>
-                    </div>
+                <div class="best_rank">
+                    <span>
+                        <p>1.뚜틴이의 개발이야기</p><span><a href="#">좋아요(10)</a><a href="#">댓글(3)</a></span>
+                    </span>
+                    <span>
+                        <p>2.뚜틴이의 정처기 도전기</p><span><a href="#">좋아요(10)</a><a href="#">댓글(3)</a></span>
+                    </span>
+                    <span>
+                        <p>3.뚜틴이의 1인1치킨 도전기</p><span><a href="#">좋아요(10)</a><a href="#">댓글(3)</a></span>
+                    </span>
+                    <span>
+                        <p>4.뚜틴이의 뚜루뚜루</p><span><a href="#">좋아요(10)</a><a href="#">댓글(3)</a></span>
+                    </span>
+                </div>
+            </div>
+            <div class="best_card">
+                <div class="best_title">
+                    <h3 class="title">전체 베스트</h3>
+                    <p class="more"> 더보기 ></p>
+                </div>
+                <div class="best_rank">
+                    <span>
+                        <p>1.뚜틴이의 개발이야기</p><span><a href="#">좋아요(10)</a><a href="#">댓글(3)</a></span>
+                    </span>
+                    <span>
+                        <p>2.뚜틴이의 정처기 도전기</p><span><a href="#">좋아요(10)</a><a href="#">댓글(3)</a></span>
+                    </span>
+                    <span>
+                        <p>3.뚜틴이의 1인1치킨 도전기</p><span><a href="#">좋아요(10)</a><a href="#">댓글(3)</a></span>
+                    </span>
+                    <span>
+                        <p>4.뚜틴이의 뚜루뚜루</p><span><a href="#">좋아요(10)</a><a href="#">댓글(3)</a></span>
+                    </span>
+                </div>
+            </div>
+            <div class="best_card">
+                <div class="best_title">
+                    <h3 class="title">전체 베스트</h3>
+                    <p class="more"> 더보기 ></p>
+                </div>
+                <div class="best_rank">
+                    <span>
+                        <p>1.뚜틴이의 개발이야기</p><span><a href="#">좋아요(10)</a><a href="#">댓글(3)</a></span>
+                    </span>
+                    <span>
+                        <p>2.뚜틴이의 정처기 도전기</p><span><a href="#">좋아요(10)</a><a href="#">댓글(3)</a></span>
+                    </span>
+                    <span>
+                        <p>3.뚜틴이의 1인1치킨 도전기</p><span><a href="#">좋아요(10)</a><a href="#">댓글(3)</a></span>
+                    </span>
+                    <span>
+                        <p>4.뚜틴이의 뚜루뚜루</p><span><a href="#">좋아요(10)</a><a href="#">댓글(3)</a></span>
+                    </span>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <hr />
     <div class="footer">

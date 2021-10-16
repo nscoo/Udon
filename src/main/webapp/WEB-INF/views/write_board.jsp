@@ -6,7 +6,8 @@
 <html>
 
 <head>
-    <meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no, target-density=medium-dpi">
     <title>Udon</title>
     <link rel="icon" href="resources/img/favicon-16x16.png" sizes="16x16">
@@ -83,57 +84,53 @@
 
     }
 
-    .detail_tite {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        padding-top: 50px;
-        height: 70px;
-    }
-
-    .detail_tite>p {
-        place-self: center;
-    }
-
     .board_menu {
         display: grid;
-        grid-template-columns: repeat(8, 1fr);
+        grid-template-columns: repeat(9, 1fr);
         padding-top: 50px;
     }
 
-    .board_menu>span>a:hover {
-        color: purple;
-    }
-
-    .comment_icon {
-        display: inline-grid;
-        grid-template-columns: repeat(3, 1fr);
-
-    }
-
-    .comment_icon>p {
-        margin-left: 20px;
-    }
-
-    .comment_area {
-        padding-top: 20px;
-    }
-
-    .detail_content {
+    .best_group {
         display: grid;
-        height: 300px;
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    #new-comment {
-        margin-top: 0px;
-        margin-bottom: 0px;
-        height: 113px;
-        width: 1140px;
+    .title {
+        float: left;
+    }
+
+    .more {
+        text-align: right;
+    }
+
+    .best_rank {
+        background-color: lightgrey;
+        padding: 10px;
+    }
+
+    .best_card {
+        padding: 20px;
+    }
+
+    .best_title {
         display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .comment-row {
-        padding-top: 50px;
-        padding-bottom: 10px;
+    .best_rank>span {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .best_rank>span>span {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
+        place-self: start end;
+    }
+
+    .write_row {
+        display: grid;
     }
     </style>
 </head>
@@ -155,7 +152,7 @@
             </div>
         </div>
         <div class="board_menu">
-            <span><a href="${pageContext.request.contextPath}/total_list.do" style="font-size: 20px;">전체 베스트</a></span>
+            <span><a href="#" style="font-size: 20px;">전체 베스트</a></span>
             <span><a href="#" style="font-size: 20px;">자유게시판</a></span>
             <span><a href="#" style="font-size: 20px;">시 구청 정보</a></span>
             <span><a href="#" style="font-size: 20px;">모이면 싸다</a></span>
@@ -165,35 +162,26 @@
             <span><a href="#" style="font-size: 20px;">연애 상담</a></span>
         </div>
         <hr>
-        <div class="detail_tite">
-            <h4>아니 근데 있잖아...</h3>
-                <p>2분전</p>
-        </div>
-        <div class="detail_content">
-            <p>트고 꽃 피고 새 우는 봄날의 천지는 얼마나 기쁘며 얼마나 아름다우냐? 이것을 얼음 속에서 불러 내는 것이 따뜻한 봄바람이다 인생에 따뜻한 봄바람을 불어 보내는 것은 청춘의 끓는 피다 청춘의 피가 뜨거운지라 인간의</p>
-        </div>
-        <div class="comment_area">
-            <div class="comment_icon">
-                <p>좋아요</p>
-                <p>댓글</p>
-                <p>조회</p>
-            </div>
-            <div class="comment">
-                <div class="comment-row">
-                    <textarea id="new-comment" name="new-comment" rows=5 placeholder="New Comment"></textarea>
-                    <button type="submit">작성 완료</button>
-                </div>
-                <div class="comment-row">
-                    <div class="comment-date">사용자 아이디</div>
-                    <div class="comment-content">우와 대박이에용</div>
-                    <div class="comment-date">2021-10-12 14:44:01</div>
-                </div>
-                <div class="comment-row">
-                    <div class="comment-date">사용자 아이디</div>
-                    <div class="comment-content">우와 대박이에용</div>
-                    <div class="comment-date">2021-10-12 14:44:01</div>
-                </div>
-            </div>
+        <div class="write_row">
+            <form method="post" action="writeAction.jsp">
+                <table class="table table-striped" style="text-align: center; border: 1px solid #dddddd">
+                    <thead>
+                        <tr>
+                            <th colspan="2" style="background-color: #eeeeee; text-align: center;"> 글쓰기 </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" placeholder="글 제목" name="bbsTitle" maxlength="50"></td>
+                        </tr>
+                        <tr>
+                            <td><textarea class="form-control" placeholder="폭언, 욕설, 음란 등의 글을 작성하시면 제제의 사유가 될 수 있습니다." name="bbsContent" maxlength="2048" style="height: 350px;"></textarea></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- 글쓰기 버튼 생성 -->
+                <input type="submit" class="btn btn-primary pull-right" value="글쓰기">
+            </form>
         </div>
     </div>
     <hr />

@@ -119,11 +119,24 @@ public class HomeController {
 	}
 
 	//커뮤니티 상세
-
+	@RequestMapping(value = "/community_detail.do", method = RequestMethod.GET)
+	public String community_detail() {
+		
+		
+		return "community_detail";
+	}
+	//커뮤니티
 	@RequestMapping(value = "/community.do", method = RequestMethod.GET)
 	public String community() {
 		
 		
 		return "community";
+	}
+	//글쓰기
+	@RequestMapping(value = "/write_board.do", method = RequestMethod.GET)
+	public String write_board() {
+		
+		
+		return "write_board";
 	}
 }
