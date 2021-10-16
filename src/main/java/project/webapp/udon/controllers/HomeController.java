@@ -125,4 +125,11 @@ public class HomeController {
 		
 		return "community";
 	}
+	//글쓰기
+	@RequestMapping(value = "/write_board.do", method = RequestMethod.GET)
+	public String write_board() {
+		
+		
+		return "write_board";
+	}
 }
