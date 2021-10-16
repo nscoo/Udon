@@ -37,7 +37,7 @@
         text-decoration: none;
         color: black;
     }
-    
+
 
     button {
         border: 0;
@@ -106,7 +106,7 @@
         place-self: start center;
     }
 
-     .menu {
+    .menu {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         text-align: center;
@@ -114,24 +114,15 @@
         margin-bottom: 10px;
     }
 
-    .write {
-        display: grid;
-        height: 200px;
-        padding: 20px;
-        background-color: mediumpurple;
+    
 
+    .attach {
+        display: grid;
+        place-self: center;
+        gap: 10px;
+        grid-template-columns: repeat(3, 1fr);
     }
 
-    .write-box {
-
-        display: grid;
-        place-content: center;
-    }
-
-    .write-bottom {
-        display: grid;
-        place-self: start end;
-    }
 
     .club-post {
         display: grid;
@@ -141,49 +132,15 @@
 
     .post {
         display: grid;
-        grid-template-columns: 1fr 3fr;
-
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        padding: 30px 0;
 
     }
 
-    .profile-photo {
-        display: grid;
-        place-self: start center;
+    .photo {
+
         text-align: center;
-        padding-top: 20px;
-    }
-
-    .post-right {
-        display: grid;
-        padding-top: 20px;
-        place-self: start;
-    }
-
-    .journal {
-        display: grid;
-        padding-top: 20px;
-        place-self: start center;
-    }
-
-
-    .comment {
-        display: grid;
-        grid-template-columns: 1fr 4fr;
-        padding-top: 20px;
-
-    }
-
-    .c-profile {
-        display: grid;
-        place-self: start center;
-        text-align: center;
-    }
-
-    .c-comment {
-        display: grid;
-        vertical-align: middle;
-
-
     }
     </style>
 </head>
@@ -211,57 +168,76 @@
                     <p style="text-align: center; font-size: 20px; font-weight: bold; padding-top: 10px;">소형견 사회화 모임</p>
                 </div>
                 <div class="profile-des">
-                    <a href="${pageContext.request.contextPath}/club_members.do"><p>멤버 41</p></a>
+                    <a href="${pageContext.request.contextPath}/club_members.do">
+                        <p>멤버 41</p>
+                    </a>
                     <p>\클럽과 게시물이 공개되지 않습니다.
                         <br />초대로만 가입이 가능합니다.</p>
                 </div>
             </div>
             <div class="m-right">
                 <div class="menu">
-                    <span><a href="#">게시글</a></span>
-                    <span><a href="${pageContext.request.contextPath}/club_album.do">앨범</a></span>
+                    <span><a href="${pageContext.request.contextPath}/club_detail.do">게시글</a></span>
+                    <span><a href="#">앨범</a></span>
                     <span><a href="#">일정</a></span>
                     <span><a href="#">투표</a></span>
                 </div>
-                <div class="write">
-                    <div class="write-box">
-                        <input type="text" name="posting" placeholder="내용을 입력해주세요" style="height: 150px; width:500px; border-radius: 5px; border: none;" />
-                    </div>
-                    <div class="write-bottom">
-                        <button type="submit" name="posting" class="btn btn-info disabled btn-sm">글쓰기</button>
-                    </div>
-                </div>
+                
                 <div class="club-post">
                     <div class="post">
-                        <div class="profile-photo">
-                            <span><img src="resources/img/a.jpg" width="50px" height="50px" style="border-radius: 20px;"></span>
-                            <p>고심일등사랑</p>
+                        <div class="photo">
+                            <span><img src="resources/img/a.jpg" width="200px" height="200px"></span>
+                            <p>신나는 고심</p>
                         </div>
-                        <div class="post-right">
-                            <p style="font-size: 12px;">2021년 10월 07일 21시22분</p>
-                            <span><img src="resources/img/c-ramen.jpg" width="400px" height="300px"></span>
+                        <div class="photo">
+                            <span><img src="resources/img/c.jpg" width="200px" height="200px"></span>
+                            <p>신나는 고심</p>
                         </div>
-                    </div>
-                    <div class="journal">
-                        <p>오늘 강동역앞에 새로생긴 라멘집 가봤는데 진짜 맛있었음!<br /> 제발 꼭 가봐요 여러분 ㅠㅠㅠ<br />아니면 다음 미팅 여기서 어떠십니까 여러분 애견동반가능해요!</p>
-                    </div>
-                    <div class="comments">
-                        <span style="padding: 0 20px;"><a href="#">좋아요(21)</a></span>
-                        <span><a href="#">댓글(1)</a></span>
-                    </div>
-                    <div class="comment">
-                        <div class="c-profile">
-                            <span><img src="resources/img/b.jpg" width="40px" height="40px"></span>
-                            <p style="font-size: 15px;">고심이등사랑</p>
+                        <div class="photo">
+                            <span><img src="resources/img/b.jpg" width="200px" height="200px"></span>
+                            <p>신나는 고심</p>
                         </div>
-                        <div class="c-comment">
-                            <span>오우 완전 맛있겠는데용? 고고!</span>
+                        <div class="photo">
+                            <span><img src="resources/img/d.jpg" width="200px" height="200px"></span>
+                            <p>신나는 고심</p>
+                        </div>
+                        <div class="photo">
+                            <span><img src="resources/img/a.jpg" width="200px" height="200px"></span>
+                            <p>신나는 고심</p>
+                        </div>
+                        <div class="photo">
+                            <span><img src="resources/img/c.jpg" width="200px" height="200px"></span>
+                            <p>신나는 고심</p>
+                        </div>
+                        <div class="photo">
+                            <span><img src="resources/img/b.jpg" width="200px" height="200px"></span>
+                            <p>신나는 고심</p>
+                        </div>
+                        <div class="photo">
+                            <span><img src="resources/img/d.jpg" width="200px" height="200px"></span>
+                            <p>신나는 고심</p>
+                        </div>
+                        <div class="photo">
+                            <span><img src="resources/img/a.jpg" width="200px" height="200px"></span>
+                            <p>신나는 고심</p>
+                        </div>
+                        <div class="photo">
+                            <span><img src="resources/img/c.jpg" width="200px" height="200px"></span>
+                            <p>신나는 고심</p>
+                        </div>
+                        <div class="photo">
+                            <span><img src="resources/img/b.jpg" width="200px" height="200px"></span>
+                            <p>신나는 고심</p>
+                        </div>
+                        <div class="photo">
+                            <span><img src="resources/img/d.jpg" width="200px" height="200px"></span>
+                            <p>신나는 고심</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-            <hr />
+        <hr />
         <div class="footer">
             <div class="logo">
                 <img src="resources/img/logo.png" width="150px;" height="150px;">
