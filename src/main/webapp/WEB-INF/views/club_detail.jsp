@@ -130,7 +130,19 @@
 
     .write-bottom {
         display: grid;
+        grid-template-columns: 0.3fr 1fr;
+    }
+
+    .write-bottom>button {
+        display: grid;
         place-self: start end;
+    }
+
+    .attach {
+        display: grid;
+        place-self: center;
+        gap: 10px;
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .club-post {
@@ -212,7 +224,7 @@
                 </div>
                 <div class="profile-des">
                     <a href="${pageContext.request.contextPath}/club_members.do"><p>멤버 41</p></a>
-                    <p>\클럽과 게시물이 공개되지 않습니다.
+                    <p>클럽과 게시물이 공개되지 않습니다.
                         <br />초대로만 가입이 가능합니다.</p>
                 </div>
             </div>
@@ -220,7 +232,7 @@
                 <div class="menu">
                     <span><a href="#">게시글</a></span>
                     <span><a href="${pageContext.request.contextPath}/club_album.do">앨범</a></span>
-                    <span><a href="#">일정</a></span>
+                    <span><a href="${pageContext.request.contextPath}/club_calendar.do">일정</a></span>
                     <span><a href="#">투표</a></span>
                 </div>
                 <div class="write">
@@ -228,6 +240,11 @@
                         <input type="text" name="posting" placeholder="내용을 입력해주세요" style="height: 150px; width:500px; border-radius: 5px; border: none;" />
                     </div>
                     <div class="write-bottom">
+                    	<div class="attach">
+                            <span><a href="#"><img src="resources/img/folder.png" width="40px" height="40px"></a></span>
+                            <span><a href="#"><img src="resources/img/calendar.png" width="40px" height="40px"></a></span>
+                            <span><a href="#"><img src="resources/img/vote.png" width="40px" height="40px"></a></span>
+                        </div>
                         <button type="submit" name="posting" class="btn btn-info disabled btn-sm">글쓰기</button>
                     </div>
                 </div>
