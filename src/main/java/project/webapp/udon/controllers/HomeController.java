@@ -146,4 +146,11 @@ public class HomeController {
 		
 		return "write_board";
 	}
+	//회원정보
+	@RequestMapping(value = "/myinfo.do", method = RequestMethod.GET)
+	public String myinfo() {
+		
+		
+		return "myinfo";
+	}
 }

@@ -213,7 +213,7 @@
             </div>
             <div class="h-login">
                 <span><a href="${pageContext.request.contextPath}/login.do">Login</a></span>
-                <span><a href="${pageContext.request.contextPath}/mypage.do">내정보</a></span>
+                <span><a href="${pageContext.request.contextPath}/myinfo.do">내정보</a></span>
             </div>
         </div>
         <div class="main">
