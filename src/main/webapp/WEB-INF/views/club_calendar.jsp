@@ -15,6 +15,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="common.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style type="text/css">
     @font-face {
         font-family: 'GmarketSansMedium';
@@ -116,32 +117,51 @@
 
     
 
-    .attach {
-        display: grid;
-        place-self: center;
-        gap: 10px;
-        grid-template-columns: repeat(3, 1fr);
+    #calendarForm{
+    	display: grid;
+    	place-self: start center;
+    	text-align: center;
+    	padding: 50px;
+    	
     }
+    
+    
+    .custom_calendar_table td {
+    text-align: center;
+}
 
+.custom_calendar_table thead.cal_date th {
+    font-size: 1.5rem;
+}
 
-    .club-post {
-        display: grid;
-        background-color: lightgray;
-        margin-top: 50px;
-    }
+.custom_calendar_table thead.cal_date th button {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+}
 
-    .post {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(4, 1fr);
-        padding: 30px 0;
+.custom_calendar_table thead.cal_week th {
+    background-color: #288CFF;
+    color: #fff;
+}
 
-    }
+.custom_calendar_table tbody td {
+    cursor: pointer;
+}
 
-    .photo {
+.custom_calendar_table tbody td:nth-child(1) {
+    color: red;
+}
 
-        text-align: center;
-    }
+.custom_calendar_table tbody td:nth-child(7) {
+    color: #288CFF;
+}
+
+.custom_calendar_table tbody td.select_day {
+    background-color: #288CFF;
+    color: #fff;
+}
+
     </style>
 </head>
 
@@ -178,63 +198,16 @@
             <div class="m-right">
                 <div class="menu">
                     <span><a href="${pageContext.request.contextPath}/club_detail.do">게시글</a></span>
-                    <span><a href="#">앨범</a></span>
-                    <span><a href="${pageContext.request.contextPath}/club_calendar.do">일정</a></span>
+                    <span><a href="${pageContext.request.contextPath}/club_album.do">앨범</a></span>
+                    <span><a href="#">일정</a></span>
                     <span><a href="#">투표</a></span>
                 </div>
                 
                 <div class="club-post">
                     <div class="post">
-                        <div class="photo">
-                            <span><img src="resources/img/a.jpg" width="200px" height="200px"></span>
-                            <p>신나는 고심</p>
-                        </div>
-                        <div class="photo">
-                            <span><img src="resources/img/c.jpg" width="200px" height="200px"></span>
-                            <p>신나는 고심</p>
-                        </div>
-                        <div class="photo">
-                            <span><img src="resources/img/b.jpg" width="200px" height="200px"></span>
-                            <p>신나는 고심</p>
-                        </div>
-                        <div class="photo">
-                            <span><img src="resources/img/d.jpg" width="200px" height="200px"></span>
-                            <p>신나는 고심</p>
-                        </div>
-                        <div class="photo">
-                            <span><img src="resources/img/a.jpg" width="200px" height="200px"></span>
-                            <p>신나는 고심</p>
-                        </div>
-                        <div class="photo">
-                            <span><img src="resources/img/c.jpg" width="200px" height="200px"></span>
-                            <p>신나는 고심</p>
-                        </div>
-                        <div class="photo">
-                            <span><img src="resources/img/b.jpg" width="200px" height="200px"></span>
-                            <p>신나는 고심</p>
-                        </div>
-                        <div class="photo">
-                            <span><img src="resources/img/d.jpg" width="200px" height="200px"></span>
-                            <p>신나는 고심</p>
-                        </div>
-                        <div class="photo">
-                            <span><img src="resources/img/a.jpg" width="200px" height="200px"></span>
-                            <p>신나는 고심</p>
-                        </div>
-                        <div class="photo">
-                            <span><img src="resources/img/c.jpg" width="200px" height="200px"></span>
-                            <p>신나는 고심</p>
-                        </div>
-                        <div class="photo">
-                            <span><img src="resources/img/b.jpg" width="200px" height="200px"></span>
-                            <p>신나는 고심</p>
-                        </div>
-                        <div class="photo">
-                            <span><img src="resources/img/d.jpg" width="200px" height="200px"></span>
-                            <p>신나는 고심</p>
-                        </div>
+                    	<div id="calendarForm"></div>
                     </div>
-                </div>
+               	</div>  
             </div>
         </div>
         <hr />
@@ -252,5 +225,94 @@
         </div>
     </div>
 </body>
+<script type="text/javascript">
+(function () {
+    calendarMaker($("#calendarForm"), new Date());
+})();
 
+var nowDate = new Date();
+function calendarMaker(target, date) {
+    if (date == null || date == undefined) {
+        date = new Date();
+    }
+    nowDate = date;
+    if ($(target).length > 0) {
+        var year = nowDate.getFullYear();
+        var month = nowDate.getMonth() + 1;
+        $(target).empty().append(assembly(year, month));
+    } else {
+        console.error("custom_calendar Target is empty!!!");
+        return;
+    }
+
+    var thisMonth = new Date(nowDate.getFullYear(), nowDate.getMonth(), 1);
+    var thisLastDay = new Date(nowDate.getFullYear(), nowDate.getMonth() + 1, 0);
+
+
+    var tag = "<tr>";
+    var cnt = 0;
+    //빈 공백 만들어주기
+    for (i = 0; i < thisMonth.getDay(); i++) {
+        tag += "<td></td>";
+        cnt++;
+    }
+
+    //날짜 채우기
+    for (i = 1; i <= thisLastDay.getDate(); i++) {
+        if (cnt % 7 == 0) { tag += "<tr>"; }
+
+        tag += "<td>" + i + "</td>";
+        cnt++;
+        if (cnt % 7 == 0) {
+            tag += "</tr>";
+        }
+    }
+    $(target).find("#custom_set_date").append(tag);
+    calMoveEvtFn();
+
+    function assembly(year, month) {
+        var calendar_html_code =
+            "<table class='custom_calendar_table'>" +
+            "<colgroup>" +
+            "<col style='width:81px'/>" +
+            "<col style='width:81px'/>" +
+            "<col style='width:81px'/>" +
+            "<col style='width:81px'/>" +
+            "<col style='width:81px'/>" +
+            "<col style='width:81px'/>" +
+            "<col style='width:81px'/>" +
+            "</colgroup>" +
+            "<thead class='cal_date'>" +
+            "<th><button type='button' class='prev'><</button></th>" +
+            "<th colspan='5'><p><span>" + year + "</span>년 <span>" + month + "</span>월</p></th>" +
+            "<th><button type='button' class='next'>></button></th>" +
+            "</thead>" +
+            "<thead  class='cal_week'>" +
+            "<th>일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>토</th>" +
+            "</thead>" +
+            "<tbody id='custom_set_date'>" +
+            "</tbody>" +
+            "</table>";
+        return calendar_html_code;
+    }
+
+    function calMoveEvtFn() {
+        //전달 클릭
+        $(".custom_calendar_table").on("click", ".prev", function () {
+            nowDate = new Date(nowDate.getFullYear(), nowDate.getMonth() - 1, nowDate.getDate());
+            calendarMaker($(target), nowDate);
+        });
+        //다음날 클릭
+        $(".custom_calendar_table").on("click", ".next", function () {
+            nowDate = new Date(nowDate.getFullYear(), nowDate.getMonth() + 1, nowDate.getDate());
+            calendarMaker($(target), nowDate);
+        });
+        //일자 선택 클릭
+        $(".custom_calendar_table").on("click", "td", function () {
+            $(".custom_calendar_table .select_day").removeClass("select_day");
+            $(this).removeClass("select_day").addClass("select_day");
+        });
+    }
+}
+    </script>
 </html>
