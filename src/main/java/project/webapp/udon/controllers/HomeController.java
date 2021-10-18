@@ -153,4 +153,11 @@ public class HomeController {
 		
 		return "myinfo";
 	}
+	//프로필 수정
+	@RequestMapping(value = "/setprofile.do", method = RequestMethod.GET)
+	public String setprofile() {
+		
+		
+		return "setprofile";
+	}
 }
