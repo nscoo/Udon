@@ -1,8 +1,10 @@
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ page trimDirectiveWhitespaces="true"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
+
 <html>
 
 <head>
@@ -15,6 +17,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="common.css">
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
     <style type="text/css">
     @font-face {
         font-family: 'GmarketSansMedium';
@@ -81,12 +86,10 @@
 
     }
 
-    .login{
-    display: grid;
-    place-content : center;
-    gap: 40px;
-    padding: 80px 25px 80px 25px;
-	}
+    .select_img {
+        float: right;
+
+    }
     </style>
 </head>
 
@@ -102,52 +105,37 @@
                 <span><a href="${pageContext.request.contextPath}/community.do" style="font-size: 20px;">우동커뮤니티</a></span>
             </div>
             <div class="h-login">
-                <span><a href="${pageContext.request.contextPath}/login.do">Login</a></span>
+                <span><a href="${pageContext.request.contextPath}/login">Login</a></span>
                 <span><a href="${pageContext.request.contextPath}/myinfo.do">내정보</a></span>
             </div>
         </div>
-        <div class="login">
-            <!-- 로그인 -->
-            <form method="post" role="form" id="login" action="${pageContext.request.contextPath}/loginAction.do">
-                <fieldset>
-                    <legend>로그인</legend>
-                    <div class="form-group">
-                        <label for="user_id">아이디</label>
-                        <input type="text" id="user_id" name="userid" class="form-control" placeholder="아이디를 입력하세요." />
-                    </div>
-                    <div class="form-group">
-                        <label for="user_pw">비밀번호</label>
-                        <input type="password" id="user_pw" name="userpw" class="form-control" placeholder="비밀번호를 입력하세요." style="font-family: emoji;" />
-                    </div>
-                    <div id="button_group">
-                        <button type="submit" class="btn btn-primary btn-block" id="login_btn">
-                            로그인
-                        </button>
-                        <button type="button" class="btn btn-primary btn-block" id="regit_btn" onclick="location.href='${pageContext.request.contextPath}/register.do'">
-                            회원가입
-                        </button>
-                        <button type="button" class="btn btn-primary btn-block" id="regit_btn" onclick="location.href='${pageContext.request.contextPath}/find_account.do'">
-                            아이디 / 비밀번호 찾기
-                        </button>
-                    </div>
-                </fieldset>
-            </form>
+        <hr>
+        <div class="content">
+            <div class="c_header">
+                <h3>프로필 설정</h3>
+            </div>
+            <div class="c_body">
+                <p>대표 프로필을 수정할 수 있습니다</p>
+                <img src="resources/img/users.png" width="110px"> <input type="file">
+            </div>
+                        <div class="select_img">
+                <input type="button" name="save" value="저장하기">
             </div>
         </div>
-        <hr />
-        <div class="footer">
-            <div class="logo">
-                <img src="resources/img/logo.png" width="150px;" height="150px;">
-            </div>
-            <div class="f-menu">
-                <br />
-                <span><b><a href="#">서비스소개 &nbsp;&nbsp;</a></b></span>
-                <span><b><a href="#">고객센터</a></b></span>
-                <br /><br /><br /><br />
-                <span><a href="#"> ©Udon 우리동네클럽</a></span>
-            </div>
+    </div>
+    <hr />
+    <div class="footer">
+        <div class="logo">
+            <img src="resources/img/logo.png" width="150px;" height="150px;">
         </div>
-
+        <div class="f-menu">
+            <br />
+            <span><b><a href="#">서비스소개 &nbsp;&nbsp;</a></b></span>
+            <span><b><a href="#">고객센터</a></b></span>
+            <br /><br /><br /><br />
+            <span><a href="#"> ©Udon 우리동네클럽</a></span>
+        </div>
+    </div>
 </body>
 
 </html>

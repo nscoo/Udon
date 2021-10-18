@@ -153,4 +153,18 @@ public class HomeController {
 		
 		return "write_board";
 	}
+	//회원정보
+	@RequestMapping(value = "/myinfo.do", method = RequestMethod.GET)
+	public String myinfo() {
+		
+		
+		return "myinfo";
+	}
+	//프로필 수정
+	@RequestMapping(value = "/setprofile.do", method = RequestMethod.GET)
+	public String setprofile() {
+		
+		
+		return "setprofile";
+	}
 }
