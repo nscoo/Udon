@@ -233,7 +233,7 @@
                     <span><a href="#">게시글</a></span>
                     <span><a href="${pageContext.request.contextPath}/club_album.do">앨범</a></span>
                     <span><a href="${pageContext.request.contextPath}/club_calendar.do">일정</a></span>
-                    <span><a href="#">투표</a></span>
+                    <span><a href="${pageContext.request.contextPath}/club_vote.do">투표</a></span>
                 </div>
                 <div class="write">
                     <div class="write-box">

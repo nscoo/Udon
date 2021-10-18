@@ -15,7 +15,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="common.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style type="text/css">
     @font-face {
         font-family: 'GmarketSansMedium';
@@ -114,54 +113,50 @@
         font-weight: bold;
         margin-bottom: 10px;
     }
-
-    
-
-    #calendarForm{
-    	display: grid;
-    	place-self: start center;
-    	text-align: center;
-    	padding: 50px;
-    	
+    .post {
+        display: grid;
+        place-self: start center;
+        background-color: #f0f0f0;
+        padding: 40px;
     }
-    
-    
-    .custom_calendar_table td {
-    text-align: center;
-}
 
-.custom_calendar_table thead.cal_date th {
-    font-size: 1.5rem;
-}
+    .comment {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        padding-top: 20px;
 
-.custom_calendar_table thead.cal_date th button {
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-}
+    }
 
-.custom_calendar_table thead.cal_week th {
-    background-color: #288CFF;
-    color: #fff;
-}
+    .title {
+        display: grid;
+        place-self: start center;
+    }
 
-.custom_calendar_table tbody td {
-    cursor: pointer;
-}
+    .content {
+        display: grid;
+        padding: 20px;
+    }
 
-.custom_calendar_table tbody td:nth-child(1) {
-    color: red;
-}
+    .bottom {
+        display: grid;
+        place-self: start end;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
 
-.custom_calendar_table tbody td:nth-child(7) {
-    color: #288CFF;
-}
+    .c-profile {
+        display: grid;
+        place-self: start center;
+        text-align: center;
+    }
 
-.custom_calendar_table tbody td.select_day {
-    background-color: #288CFF;
-    color: #fff;
-}
 
+    .c-comment {
+        display: grid;
+        vertical-align: middle;
+
+
+    }
     </style>
 </head>
 
@@ -188,9 +183,8 @@
                     <p style="text-align: center; font-size: 20px; font-weight: bold; padding-top: 10px;">소형견 사회화 모임</p>
                 </div>
                 <div class="profile-des">
-                    <a href="${pageContext.request.contextPath}/club_members.do">
-                        <p>멤버 41</p>
-                    </a>
+                    <p><a href="${pageContext.request.contextPath}/club_members.do">
+                            멤버 41</a></p>
                     <p>클럽과 게시물이 공개되지 않습니다.
                         <br />초대로만 가입이 가능합니다.</p>
                 </div>
@@ -199,15 +193,67 @@
                 <div class="menu">
                     <span><a href="${pageContext.request.contextPath}/club_detail.do">게시글</a></span>
                     <span><a href="${pageContext.request.contextPath}/club_album.do">앨범</a></span>
-                    <span><a href="${pageContext.request.contextPath}/club_calendar.do">일정</a></span>
-                    <span><a href="${pageContext.request.contextPath}/club_vote.do">투표</a></span>
+                    <span><a href="#">일정</a></span>
+                    <span><a href="#">투표</a></span>
                 </div>
-                
                 <div class="club-post">
                     <div class="post">
-                    	<div id="calendarForm"></div>
+                        <div class="title">
+                            <h4>이번주 토요일 모임 장소 투표</h4>
+                        </div>
+                        <div class="content">
+                            <li>
+                                <input type="radio" name="vote" />
+                                <label for="one">신논현역</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="vote" />
+                                <label for="two">강남역</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="vote" />
+                                <label for="three">금정역</label>
+                            </li>
+                        </div>
+                        <div class="bottom">
+                            <button type="button" class="btn btn-sm btn-success">투표하기</button>
+                            <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                투표결과보기
+                            </button>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">투표 결과 확인하기</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>
+                                            신논현역 <span style="color: red; font-weight: bold;">33%</span>
+                                        </p>
+                                        <p>강남역 <span style="color: orange; font-weight: bold;">33%</span></p>
+                                        <p>금정역 <span style="color: blue; font-weight: bold;">33%</span></p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="comment">
+                            <div class="c-profile">
+                                <span><img src="resources/img/c.jpg" width="40px" height="40px"></span>
+                                <p style="font-size: 15px;">노상처리</p>
+                            </div>
+                            <div class="c-comment">
+                                <span>무적권 금정역!</span>
+                            </div>
+                        </div>
                     </div>
-               	</div>  
+                </div>
             </div>
         </div>
         <hr />
@@ -225,94 +271,5 @@
         </div>
     </div>
 </body>
-<script type="text/javascript">
-(function () {
-    calendarMaker($("#calendarForm"), new Date());
-})();
 
-var nowDate = new Date();
-function calendarMaker(target, date) {
-    if (date == null || date == undefined) {
-        date = new Date();
-    }
-    nowDate = date;
-    if ($(target).length > 0) {
-        var year = nowDate.getFullYear();
-        var month = nowDate.getMonth() + 1;
-        $(target).empty().append(assembly(year, month));
-    } else {
-        console.error("custom_calendar Target is empty!!!");
-        return;
-    }
-
-    var thisMonth = new Date(nowDate.getFullYear(), nowDate.getMonth(), 1);
-    var thisLastDay = new Date(nowDate.getFullYear(), nowDate.getMonth() + 1, 0);
-
-
-    var tag = "<tr>";
-    var cnt = 0;
-    //빈 공백 만들어주기
-    for (i = 0; i < thisMonth.getDay(); i++) {
-        tag += "<td></td>";
-        cnt++;
-    }
-
-    //날짜 채우기
-    for (i = 1; i <= thisLastDay.getDate(); i++) {
-        if (cnt % 7 == 0) { tag += "<tr>"; }
-
-        tag += "<td>" + i + "</td>";
-        cnt++;
-        if (cnt % 7 == 0) {
-            tag += "</tr>";
-        }
-    }
-    $(target).find("#custom_set_date").append(tag);
-    calMoveEvtFn();
-
-    function assembly(year, month) {
-        var calendar_html_code =
-            "<table class='custom_calendar_table'>" +
-            "<colgroup>" +
-            "<col style='width:81px'/>" +
-            "<col style='width:81px'/>" +
-            "<col style='width:81px'/>" +
-            "<col style='width:81px'/>" +
-            "<col style='width:81px'/>" +
-            "<col style='width:81px'/>" +
-            "<col style='width:81px'/>" +
-            "</colgroup>" +
-            "<thead class='cal_date'>" +
-            "<th><button type='button' class='prev'><</button></th>" +
-            "<th colspan='5'><p><span>" + year + "</span>년 <span>" + month + "</span>월</p></th>" +
-            "<th><button type='button' class='next'>></button></th>" +
-            "</thead>" +
-            "<thead  class='cal_week'>" +
-            "<th>일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>토</th>" +
-            "</thead>" +
-            "<tbody id='custom_set_date'>" +
-            "</tbody>" +
-            "</table>";
-        return calendar_html_code;
-    }
-
-    function calMoveEvtFn() {
-        //전달 클릭
-        $(".custom_calendar_table").on("click", ".prev", function () {
-            nowDate = new Date(nowDate.getFullYear(), nowDate.getMonth() - 1, nowDate.getDate());
-            calendarMaker($(target), nowDate);
-        });
-        //다음날 클릭
-        $(".custom_calendar_table").on("click", ".next", function () {
-            nowDate = new Date(nowDate.getFullYear(), nowDate.getMonth() + 1, nowDate.getDate());
-            calendarMaker($(target), nowDate);
-        });
-        //일자 선택 클릭
-        $(".custom_calendar_table").on("click", "td", function () {
-            $(".custom_calendar_table .select_day").removeClass("select_day");
-            $(this).removeClass("select_day").addClass("select_day");
-        });
-    }
-}
-    </script>
 </html>

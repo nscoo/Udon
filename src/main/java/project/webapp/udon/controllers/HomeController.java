@@ -41,6 +41,13 @@ public class HomeController {
 		return "club_calendar";
 	}
 	
+	@RequestMapping(value = "/club_vote.do", method = RequestMethod.GET)
+	public String club_vote() {
+		
+		
+		return "club_vote";
+	}
+	
 	@RequestMapping(value = "/club_members.do", method = RequestMethod.GET)
 	public String club_members() {
 		
