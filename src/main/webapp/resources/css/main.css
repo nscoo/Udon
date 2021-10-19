@@ -1,0 +1,146 @@
+@charset "UTF-8";
+@font-face {
+        font-family: 'GmarketSansMedium';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    * {
+        font-family: 'GmarketSansMedium';
+        box-sizing: content-box;
+    }
+
+    
+
+    button {
+        border: 0;
+        outline: 0;
+        background-color: transparent;
+    }
+
+
+
+
+    .header {
+        display: grid;
+        grid-template-columns: 180px auto auto;
+
+
+    }
+
+    .h-menu {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        place-self: start;
+        align-self: center;
+        column-gap: 10px;
+    }
+
+    .h-menu>span>a:hover {
+        color: purple;
+        font-weight: bold;
+    }
+
+    .h-login {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-self: start end;
+        align-self: center;
+        column-gap: 10px;
+    }
+
+    .main {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        place-self: start center;
+        gap: 40px;
+        padding: 80px 25px 80px 25px;
+
+    }
+
+
+    .main-l {
+        display: grid;
+        grid-template-rows: auto-fit;
+        place-self: start center;
+        align-self: top;
+        margin-top: 80px;
+
+    }
+
+    .m-search {
+        display: grid;
+        place-self: start center;
+        align-self: center;
+    }
+	
+	.m-input {
+        border: 0;
+        outline: 0;
+        width: 300px;
+        margin-top: 10px;
+        font-size: 18px;
+        margin-left: 10px;
+        color: purple;
+    }
+    
+
+    .m-covid {
+        display: grid;
+        place-self: start center;
+        padding: 100px;
+
+    }
+
+    .m-covid>table {
+
+        border: solid 1px;
+        width: 500px;
+        height: 100px;
+        font-size: 20px;
+        background-color: purple;
+        color: white;
+        text-align: center;
+    }
+
+    .m-carousel {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+        place-self: start center;
+        padding: 10px;
+        margin-top: 40px;
+       
+    }
+
+    .main-r {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+        place-self: start center;
+        align-self: center;
+        width: 100%;
+        column-gap: 10px;
+
+    }
+
+    .m-board {
+        width: 100%;
+        margin-bottom: 15px;
+        background-color: #f3f3f3;
+    }
+
+    .m-board>li>a:hover {
+        color: purple;
+    }
+
+    .m-board>span>a:hover {
+        color: purple;
+    }
+
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(2, 180px);
+        place-self: start;
+        align-self: center;
+
+    }

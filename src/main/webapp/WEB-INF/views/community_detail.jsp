@@ -14,115 +14,11 @@
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="common.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/community_detail.css">
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
-    <style type="text/css">
-    @font-face {
-        font-family: 'GmarketSansMedium';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    }
-
-    * {
-        font-family: 'GmarketSansMedium';
-        box-sizing: content-box;
-    }
-
-    li {
-        list-style: none;
-
-    }
-
-    a {
-        text-decoration: none;
-        color: black;
-    }
-
-    button {
-        border: 0;
-        outline: 0;
-        background-color: transparent;
-    }
-
-
-
-
-    .header {
-        display: grid;
-        grid-template-columns: 180px auto auto;
-    }
-
-    .h-menu {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        place-self: start;
-        align-self: center;
-        column-gap: 10px;
-    }
-
-    .h-menu>span>a:hover {
-        color: purple;
-        font-weight: bold;
-    }
-
-    .h-login {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        place-self: start end;
-        align-self: center;
-        column-gap: 10px;
-    }
-
-    .footer {
-        display: grid;
-        grid-template-columns: repeat(2, 180px);
-        place-self: start;
-        align-self: center;
-
-    }
-
-    .main {
-        display: grid;
-        place-self: start center;
-        padding: 50px 4s00px;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .card {
-        display: grid;
-    }
-
-    .content {
-        height: 150px;
-    }
-
-    .board {
-        border: 1px solid #e3e3e3;
-        height: 250px;
-    }
-
-    .board_menu {
-        display: grid;
-        grid-template-columns: repeat(9, 1fr);
-        padding-top: 50px;
-    }
-
-    .board_top>h3>a {
-        float: left;
-    }
-
-    .view {
-        text-align: right;
-    }
-
-    .good {
-        float: left;
-
-    }
-    </style>
+    
 </head>
 
 <body>
@@ -163,11 +59,11 @@
             <div class="card">
                 <div class="board">
                     <div class="board_top">
-                        <h3><a href="#">전체 베스트</a></h3>
+                        <h3><a href="${pageContext.request.contextPath}/detail_board.do">있잖아 진짜 어이없었음</a></h3>
                         <p class="view">view</p>
                     </div>
                     <div class="content">
-                        <a href="#">어서 댓글 달아주세여~</a>
+                        <a href="#">어이없어어이없어</a>
                     </div>
                     <div class="comment">
                         <p class="good">좋아요&nbsp</p>

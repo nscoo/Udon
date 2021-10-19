@@ -10,172 +10,32 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no, target-density=medium-dpi">
     <title>Udon</title>
     <link rel="icon" href="resources/img/favicon-16x16.png" sizes="16x16">
+    <link rel="stylesheet" type="text/css" href="resources/css/main.css">
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <style type="text/css">
-    @font-face {
-        font-family: 'GmarketSansMedium';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    }
-
-    * {
-        font-family: 'GmarketSansMedium';
-        box-sizing: content-box;
-    }
-
-    ul {
+    	ul {
         list-style: none;
         padding-left: 0;
-    }
+    	}
 
-    li {
+    	li {
         list-style: none;
 
-    }
+    	}
 
-    a {
+    	a {
         text-decoration: none;
         color: black;
-    }
+    	}
     
-    a:hover{
+    	a:hover{
     	font-weight: bold;
     	color: purple;
-    }
-
-    button {
-        border: 0;
-        outline: 0;
-        background-color: transparent;
-    }
-
-
-
-
-    .header {
-        display: grid;
-        grid-template-columns: 180px auto auto;
-
-
-    }
-
-    .h-menu {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        place-self: start;
-        align-self: center;
-        column-gap: 10px;
-    }
-
-    .h-menu>span>a:hover {
-        color: purple;
-        font-weight: bold;
-    }
-
-    .h-login {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        place-self: start end;
-        align-self: center;
-        column-gap: 10px;
-    }
-
-    .main {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-        place-self: start center;
-        gap: 40px;
-        padding: 80px 25px 80px 25px;
-
-    }
-
-
-    .main-l {
-        display: grid;
-        grid-template-rows: auto-fit;
-        place-self: start center;
-        align-self: top;
-        margin-top: 80px;
-
-    }
-
-    .m-search {
-        display: grid;
-        place-self: start center;
-        align-self: center;
-    }
-
-    .m-input {
-        border: 0;
-        outline: 0;
-        width: 300px;
-        margin-top: 15px;
-        font-size: 18px;
-        margin-left: 10px;
-        color: purple;
-    }
-
-    .m-covid {
-        display: grid;
-        place-self: start center;
-        padding: 100px;
-
-    }
-
-    .m-covid>table {
-
-        border: solid 1px;
-        width: 500px;
-        height: 100px;
-        font-size: 20px;
-        background-color: purple;
-        color: white;
-        text-align: center;
-    }
-
-    .m-carousel {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
-        place-self: start center;
-        padding: 10px;
-        margin-top: 40px;
-       
-    }
-
-    .main-r {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-        place-self: start center;
-        align-self: center;
-        width: 100%;
-        column-gap: 10px;
-
-    }
-
-    .m-board {
-        width: 100%;
-        margin-bottom: 15px;
-        background-color: #f3f3f3;
-    }
-
-    .m-board>li>a:hover {
-        color: purple;
-    }
-
-    .m-board>span>a:hover {
-        color: purple;
-    }
-
-    .footer {
-        display: grid;
-        grid-template-columns: repeat(2, 180px);
-        place-self: start;
-        align-self: center;
-
-    }
+    	}
+    	
+    	
     </style>
 </head>
 

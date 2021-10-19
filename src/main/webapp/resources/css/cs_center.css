@@ -1,0 +1,126 @@
+@charset "UTF-8";
+@font-face {
+        font-family: 'GmarketSansMedium';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    * {
+        font-family: 'GmarketSansMedium';
+        box-sizing: content-box;
+    }
+
+    li {
+        list-style: none;
+
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    button {
+        border: 0;
+        outline: 0;
+        background-color: transparent;
+    }
+
+
+
+
+    .header {
+        display: grid;
+        grid-template-columns: 180px auto auto;
+    }
+
+    .h-menu {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        place-self: start;
+        align-self: center;
+        column-gap: 10px;
+    }
+
+    .h-menu>span>a:hover {
+        color: purple;
+        font-weight: bold;
+    }
+
+    .h-login {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-self: start end;
+        align-self: center;
+        column-gap: 10px;
+    }
+
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(2, 180px);
+        place-self: start;
+        align-self: center;
+
+    }
+
+    .main {
+        display: grid;
+        padding: 100px 25px;
+    }
+
+    .inquiry {
+        background-color: #d0c9dd;
+        padding: 100px;
+    }
+
+    .m-top {
+        display: grid;
+        padding: 20px;
+
+    }
+
+    .m-middle {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 20px;
+        gap: 10px;
+    }
+
+
+    .name>input {
+        width: 300px;
+        height: 50px;
+        font-size: 20px;
+        background-color: #d0c9dd;
+        border: none;
+
+    }
+
+    input::placeholder {
+        color: dimgray;
+
+    }
+
+    .email>input {
+        width: 300px;
+        height: 50px;
+        font-size: 20px;
+        background-color: #d0c9dd;
+        border: none;
+    }
+
+    .m-bottom {
+        display: grid;
+        grid-template-rows: 0.2fr 1fr 0.1fr;
+        gap: 10px;
+        padding: 20px;
+    }
+
+    .m-bottom>input {
+        width: 500px;
+        height: 300px;
+        font-size: 20px;
+        background-color: #d0c9dd;
+        border: none;
+    }
