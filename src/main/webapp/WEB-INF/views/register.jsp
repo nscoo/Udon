@@ -14,81 +14,8 @@
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="common.css">
-    <style type="text/css">
-    @font-face {
-        font-family: 'GmarketSansMedium';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    }
-
-    * {
-        font-family: 'GmarketSansMedium';
-        box-sizing: content-box;
-    }
-
-    li {
-        list-style: none;
-
-    }
-
-    a {
-        text-decoration: none;
-        color: black;
-    }
-
-
-    button {
-        border: 0;
-        outline: 0;
-        background-color: transparent;
-    }
-
-
-
-
-    .header {
-        display: grid;
-        grid-template-columns: 180px auto auto;
-    }
-
-    .h-menu {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        place-self: start;
-        align-self: center;
-        column-gap: 10px;
-    }
-
-    .h-menu>span>a:hover {
-        color: purple;
-        font-weight: bold;
-    }
-
-    .h-login {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        place-self: start end;
-        align-self: center;
-        column-gap: 10px;
-    }
-
-    .footer {
-        display: grid;
-        grid-template-columns: repeat(2, 180px);
-        place-self: start;
-        align-self: center;
-
-    }
-
-    .login{
-    display: grid;
-    place-content : center;
-    gap: 40px;
-    padding: 80px 25px 80px 25px;
-	}
-    </style>
+    <link rel="stylesheet" type="text/css" href="resources/css/register.css">
+    
 </head>
 
 <body>

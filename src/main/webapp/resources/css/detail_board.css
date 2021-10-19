@@ -1,0 +1,122 @@
+@charset "UTF-8";
+@font-face {
+        font-family: 'GmarketSansMedium';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    * {
+        font-family: 'GmarketSansMedium';
+        box-sizing: content-box;
+    }
+
+    li {
+        list-style: none;
+
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    a:hover{
+    	font-weight: bold;
+    	color: purple;
+    	}
+
+    button {
+        border: 0;
+        outline: 0;
+        background-color: transparent;
+    }
+
+
+
+
+    .header {
+        display: grid;
+        grid-template-columns: 180px auto auto;
+    }
+
+    .h-menu {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        place-self: start;
+        align-self: center;
+        column-gap: 10px;
+    }
+
+    .h-menu>span>a:hover {
+        color: purple;
+        font-weight: bold;
+    }
+
+    .h-login {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-self: start end;
+        align-self: center;
+        column-gap: 10px;
+    }
+
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(2, 180px);
+        place-self: start;
+        align-self: center;
+
+    }
+
+    .detail_tite {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-top: 50px;
+        height: 70px;
+    }
+
+    .detail_tite>p {
+        place-self: center;
+    }
+
+    .board_menu {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        padding-top: 50px;
+    }
+
+    .board_menu>span>a:hover {
+        color: purple;
+    }
+
+    .comment_icon {
+        display: inline-grid;
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+    .comment_icon>p {
+        margin-left: 20px;
+    }
+
+    .comment_area {
+        padding-top: 20px;
+    }
+
+    .detail_content {
+        display: grid;
+        height: 300px;
+    }
+
+    #new-comment {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        height: 113px;
+        width: 1140px;
+        display: grid;
+    }
+
+    .comment-row {
+        padding-top: 50px;
+        padding-bottom: 10px;
+    }

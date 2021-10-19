@@ -8,18 +8,22 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class HomeController {
 	
+	//main페이지
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String main() {
 		
 		
 		return "main";
 	}
+	//내 클럽 목록, 클럽 만들기 가능
 	@RequestMapping(value = "/myclub.do", method = RequestMethod.GET)
 	public String myclub() {
 		
 		
 		return "myclub";
 	}
+	
+	//클럽 페이지
 	@RequestMapping(value = "/club_detail.do", method = RequestMethod.GET)
 	public String club_detail() {
 		
@@ -27,6 +31,7 @@ public class HomeController {
 		return "club_detail";
 	}
 	
+	//클럽 앨범
 	@RequestMapping(value = "/club_album.do", method = RequestMethod.GET)
 	public String club_album() {
 		
@@ -34,6 +39,7 @@ public class HomeController {
 		return "club_album";
 	}
 	
+	//클럽 일정
 	@RequestMapping(value = "/club_calendar.do", method = RequestMethod.GET)
 	public String club_calendar() {
 		
@@ -48,6 +54,7 @@ public class HomeController {
 		return "club_vote";
 	}
 	
+	//클럽 멤버 찾기, 메세지 기능
 	@RequestMapping(value = "/club_members.do", method = RequestMethod.GET)
 	public String club_members() {
 		
@@ -55,19 +62,22 @@ public class HomeController {
 		return "club_members";
 	}
 	
+	//클럽 만들기 대분류선택
 	@RequestMapping(value = "/create_club1.do", method = RequestMethod.GET)
 	public String create_club1() {
 		
 		
 		return "create_club1";
 	}
-	
+	//클럽 만들기 상세정보입력
 	@RequestMapping(value = "/create_club2.do", method = RequestMethod.GET)
 	public String create_club2() {
 		
 		
 		return "create_club2";
 	}
+	
+	//클럽 회원 모집 페이지
 	@RequestMapping(value = "/club_recruit.do", method = RequestMethod.GET)
 	public String club_recruit() {
 		
@@ -75,6 +85,7 @@ public class HomeController {
 		return "club_recruit";
 	}
 	
+	//클럽 회원 모집 게시판
 	@RequestMapping(value = "/recruit_board.do", method = RequestMethod.GET)
 	public String recruit_board() {
 		
@@ -82,6 +93,7 @@ public class HomeController {
 		return "recruit_board";
 	}
 	
+	//클럽 회원 모집 글
 	@RequestMapping(value = "/recruit_detail.do", method = RequestMethod.GET)
 	public String recruit_detail() {
 		
@@ -89,6 +101,7 @@ public class HomeController {
 		return "recruit_detail";
 	}
 	
+	//클럽 지원한 회원들 보기
 	@RequestMapping(value = "/apply_members.do", method = RequestMethod.GET)
 	public String apply_members() {
 		
@@ -96,6 +109,7 @@ public class HomeController {
 		return "apply_members";
 	}
 
+	//로그인 페이지
 	@RequestMapping(value = "/login.do", method = RequestMethod.GET)
 	public String login() {
 		
@@ -166,5 +180,13 @@ public class HomeController {
 		
 		
 		return "setprofile";
+	}
+	
+	//고객센터
+	@RequestMapping(value = "/cs_center.do", method = RequestMethod.GET)
+	public String cs_center() {
+		
+		
+		return "cs_center";
 	}
 }

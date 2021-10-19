@@ -14,80 +14,8 @@
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="common.css">
-    <style type="text/css">
-    @font-face {
-        font-family: 'GmarketSansMedium';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    }
-
-    * {
-        font-family: 'GmarketSansMedium';
-        box-sizing: content-box;
-    }
-
-    li {
-        list-style: none;
-
-    }
-
-    a {
-        text-decoration: none;
-        color: black;
-    }
-
-    button {
-        border: 0;
-        outline: 0;
-        background-color: transparent;
-    }
-
-
-
-
-    .header {
-        display: grid;
-        grid-template-columns: 180px auto auto;
-    }
-
-    .h-menu {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        place-self: start;
-        align-self: center;
-        column-gap: 10px;
-    }
-
-    .h-menu>span>a:hover {
-        color: purple;
-        font-weight: bold;
-    }
-
-    .h-login {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        place-self: start end;
-        align-self: center;
-        column-gap: 10px;
-    }
-
-    .footer {
-        display: grid;
-        grid-template-columns: repeat(2, 180px);
-        place-self: start;
-        align-self: center;
-
-    }
-
-	.edit_box{
-	display: grid;
-    grid-template-columns: max-content;
-    place-content: center;
-	}
-    </style>
-</head>
+    <link rel="stylesheet" type="text/css" href="resources/css/mypage.css">
+    
 
 <body>
     <div class="container">
@@ -137,7 +65,7 @@
                            
                         <div class="form-group" id="icon_search">
                             <label for="inputadd">집 주소 </label>
-                            <input type="text" class="form-control" id="addr_h" name="addr_h" placeholder="집 주소를 입력하세요" value="${member.addr_h}" onclick="execution_daum_address_h()" >
+                            <input type="text" class="form-control" id="addr_h" name="addr_h" placeholder="지역 설정을 위한 주소를 입력하세요" value="${member.addr_h}" onclick="execution_daum_address_h()" >
                             
                         </div>
                         </div>
