@@ -33,7 +33,7 @@
                 <span><a href="${pageContext.request.contextPath}/community.do" style="font-size: 20px;">우동커뮤니티</a></span>
             </div>
             <div class="h-login">
-                <span><a href="${pageContext.request.contextPath}/login">Login</a></span>
+                <span><a href="${pageContext.request.contextPath}/login.do">Login</a></span>
                 <span><a href="${pageContext.request.contextPath}/myinfo.do">내정보</a></span>
             </div>
         </div>
@@ -53,9 +53,9 @@
                     </a>
                 </div>
                 <div class="club">
-                    <a href="${pageContext.request.contextPath}/myclub.do">
+                    <a href="${pageContext.request.contextPath}/mypostings.do">
                         <img src="resources/img/myclub.png" width="200px" height="200px" style="border-radius: 40px; background-color: mediumpurple; padding: 20px;" />
-                        <p style="text-align: center; font-size: 20px; font-weight: bold; padding-top: 10px;">가입한 클럽 보기</p>
+                        <p style="text-align: center; font-size: 20px; font-weight: bold; padding-top: 10px;">내가 쓴 글보기</p>
                     </a>
                 </div>
                 <div class="club">

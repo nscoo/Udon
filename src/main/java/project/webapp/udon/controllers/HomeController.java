@@ -189,4 +189,14 @@ public class HomeController {
 		
 		return "cs_center";
 	}
+	
+	//내가 쓴 글 목록
+	@RequestMapping(value = "/mypostings.do", method = RequestMethod.GET)
+	public String mypostings() {
+			
+			
+		return "mypostings";
+		}
+	
+	
 }
