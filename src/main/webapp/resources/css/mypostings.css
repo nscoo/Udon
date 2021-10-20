@@ -1,0 +1,104 @@
+@charset "UTF-8";
+@font-face {
+        font-family: 'GmarketSansMedium';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    * {
+        font-family: 'GmarketSansMedium';
+        box-sizing: content-box;
+    }
+
+    li {
+        list-style: none;
+
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    a:hover {
+        font-weight: bold;
+        color: purple;
+    }
+
+    button {
+        border: 0;
+        outline: 0;
+        background-color: transparent;
+    }
+
+
+
+
+    .header {
+        display: grid;
+        grid-template-columns: 180px auto auto;
+    }
+
+    .h-menu {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        place-self: start;
+        align-self: center;
+        column-gap: 10px;
+    }
+
+    .h-menu>span>a:hover {
+        color: purple;
+        font-weight: bold;
+    }
+
+    .h-login {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-self: start end;
+        align-self: center;
+        column-gap: 10px;
+    }
+
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(2, 180px);
+        place-self: start;
+        align-self: center;
+
+    }
+
+    .postings {
+        background-color: #f0f0f0;
+        padding: 50px;
+    }
+
+
+
+    .main {
+        display: grid;
+        padding: 50px;
+    }
+
+    .list {
+        display: grid;
+        grid-template-columns: 3fr 1fr 1fr;
+        gap: 10px;
+    }
+
+    .title {
+        display: grid;
+        place-self: start center;
+        font-size: 18px;
+    }
+
+    .date {
+        display: grid;
+        place-self: start end;
+    }
+
+    .writer {
+        display: grid;
+        place-self: start;
+    }
