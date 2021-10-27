@@ -10,3 +10,6 @@
 - 동호회 커뮤니티 페이지
 - 클럽 회원 모집 기능
 - 코로나 감염병 해당자치구 확진자 안내
+
+### Spring boot로 이전
+URL : https://github.com/suzy-thetraveler/Udon
